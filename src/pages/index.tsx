@@ -1,5 +1,3 @@
-import Prismic from '@prismicio/client';
-import { getPrismicClient } from '../services/prismic';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
@@ -17,6 +15,32 @@ import { HomeContainer } from '../styles/homeStyles';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 
+const staticProjects = [
+  {
+    slug: 'portfolio',
+    title: 'Portfolio',
+    type: 'Website',
+    description: 'Personal portfolio built with Next.js, React and Styled Components',
+    github: 'https://github.com/LeonardoMarquesDias/MyPortifolio',
+    thumbnail: 'https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    slug: 'dashboard',
+    title: 'Dashboard',
+    type: 'Web App',
+    description: 'A modern dashboard application with React and TypeScript',
+    github: 'https://github.com/LeonardoMarquesDias',
+    thumbnail: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    slug: 'ecommerce',
+    title: 'E-Commerce',
+    type: 'Web App',
+    description: 'Full-stack e-commerce platform with Next.js and Stripe integration',
+    github: 'https://github.com/LeonardoMarquesDias',
+    thumbnail: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800'
+  }
+];
 
 interface IProjeto {
   slug: string;
@@ -39,21 +63,17 @@ export default function Home({ projects }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
-        <title>Home | Protfolio</title>
+        <title>Home | Portfolio</title>
         <meta
           name="ReactJS Developer Portfolio"
-          content="Falta por uma descrição melhor aqui"
+          content="Personal portfolio showcasing React and Next.js projects"
         />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
         <meta name="twitter:image:src" content="/ogimage.png" />
-        <meta
-          property="og:ReactJS Developer Portfolio"
-          content="Falta por uma descrição melhor aqui"
-        />
       </Head>
-      
+
       <Header />
 
       <main className="container">
@@ -70,25 +90,9 @@ export default function Home({ projects }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient();
-
-  const projectResponse = await prismic.query<any>(
-    [Prismic.Predicates.at('document.type', 'projects')],
-    { orderings: '[document.first_publication_date desc]' }
-  )
-
-  const projects = projectResponse.results.map(project => ({
-    slug: project.uid,
-    title: project.data.title,
-    type: project.data.type,
-    description: project.data.description,
-    github: project.data.github.url,
-    thumbnail: project.data.thumbnail.url
-  }));
-
   return {
     props: {
-      projects
+      projects: staticProjects
     },
     revalidate: 86400
   };
