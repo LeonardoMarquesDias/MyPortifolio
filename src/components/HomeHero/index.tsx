@@ -41,6 +41,7 @@ function HomeHero() {
             <CodeLine indent><span className="key">dev:</span> <CodeValue>"React, Next.js, WordPress"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">languages:</span> <CodeValue>"HTML, CSS, JavaScript"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">search:</span> <CodeValue>"Google, Bing, AI Search"</CodeValue>,</CodeLine>
+            <CodeLine indent><span className="key">cms:</span> <CodeValue>"WordPress, Sanity, Prismic"</CodeValue>,</CodeLine>
             <CodeLine>{'}'};</CodeLine>
           </div>
         </CodeBlock>
