@@ -1,7 +1,7 @@
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt, FaReact, FaWordpress, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import { SiNextdotjs, SiTypescript, SiGoogleanalytics, SiSemrush, SiGooglesearchconsole } from 'react-icons/si';
+import { SiNextdotjs, SiTypescript, SiGoogleanalytics, SiSemrush, SiGooglesearchconsole, SiSanity, SiPrismic } from 'react-icons/si';
 import { MdOutlineSearch, MdOutlineTravelExplore } from 'react-icons/md';
 import SectionTitle from '../SectionTitle';
 import StackItem from './StackItem';
@@ -30,6 +30,8 @@ function MyStack() {
         <StackItem title="React" icon={<FaReact />} />
         <StackItem title="Next.js" icon={<SiNextdotjs />} />
         <StackItem title="WordPress" icon={<FaWordpress />} />
+        <StackItem title="Sanity" icon={<SiSanity />} />
+        <StackItem title="Prismic" icon={<SiPrismic />} />
         <StackItem title="Git" icon={<FaGitAlt />} />
       </StackGroup>
     </Container>

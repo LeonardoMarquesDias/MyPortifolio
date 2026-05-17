@@ -17,7 +17,7 @@ interface FreelanceProjectsProps {
 export default function FreelanceProjects({ projects }: FreelanceProjectsProps) {
   return (
     <Container>
-      <SectionTitle title="Freelance" description="Web Projects" />
+      <SectionTitle title="Freelance" description="Websites & Landing Pages" />
       <section>
         {projects.slice(0, 4).map(project => (
           <FreelanceItem
