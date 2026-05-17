@@ -1,5 +1,4 @@
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 import { RepositoryCard } from './styles';
 
 interface ProjetoProps {
@@ -19,9 +18,6 @@ export default function RepositoryItem({ slug, title, type, img, github }: Proje
         <h3>{title}</h3>
         <p>{type}</p>
         <div className="actions">
-          <Link to={`/project/${slug}`}>
-            See more <FaExternalLinkAlt size={11} />
-          </Link>
           <a href={github} target="_blank" rel="noreferrer">
             GitHub <FaGithub size={13} />
           </a>
