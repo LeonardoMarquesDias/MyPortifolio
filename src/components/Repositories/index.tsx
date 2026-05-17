@@ -19,7 +19,7 @@ interface RepositoriesProps {
 function Repositories({ projects }: RepositoriesProps) {
   return (
     <Container>
-      <SectionTitle title="Bootcamp Projects" description="Training Projects" />
+      <SectionTitle title="Bootcamp Projects" description="Training Projects" period="2020 – 2023" />
       <section>
         {projects.slice(0, 4).map(project => (
           <RepositoryItem

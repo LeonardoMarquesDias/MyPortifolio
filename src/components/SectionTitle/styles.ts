@@ -14,6 +14,13 @@ export const Container = styled.div`
     letter-spacing: -0.02em;
   }
 
+  .subtitle-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
   h2 {
     color: ${({ theme }) => theme.gold};
     font-weight: 300;
@@ -21,6 +28,14 @@ export const Container = styled.div`
     letter-spacing: 0.08em;
     text-transform: uppercase;
     opacity: 0.85;
+  }
+
+  .period {
+    color: ${({ theme }) => theme.gray300};
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
   }
 
   @media (max-width: 1000px) {
