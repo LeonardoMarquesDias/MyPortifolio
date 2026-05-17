@@ -1,48 +1,50 @@
-import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import { Sidebar } from '../Sidebar';
+import { FaGithub, FaArrowRight } from 'react-icons/fa';
+import { Container, LeftCol, Name, Title, Tagline, CTARow, CTAButton, CTALink, RightCol, CodeGrid, CodeItem, CodeAccent, CodeLine, CodeValue } from './styles';
 
 function HomeHero() {
   return (
     <Container data-aos="fade-up">
+      <LeftCol>
+        <Name>Leonardo<br />Dias</Name>
+        <Title>SEO Executive &amp; Front-End Developer</Title>
+        <Tagline>
+          I help businesses grow through strategic SEO and performant web experiences — from technical audits to production-ready code.
+        </Tagline>
+        <CTARow>
+          <CTAButton href="#projects">
+            View Projects <FaArrowRight />
+          </CTAButton>
+          <CTALink href="https://github.com/LeonardoMarquesDias" target="_blank" rel="noopener noreferrer">
+            <FaGithub /> GitHub
+          </CTALink>
+        </CTARow>
+      </LeftCol>
 
-      <Sidebar />
-      <div>
-        <TextContainer>
-          <h1>Leonardo Dias</h1>
-          <h2>SEO Executive & Front-End Developer</h2>
-        </TextContainer>
-        <InfosContainer>
-          <CodeItem data-aos="zoom-in">
-            <span className="purple">Profile</span> {'\u007B'}
+      <RightCol data-aos="zoom-in">
+        <CodeGrid>
+          <CodeItem>
+            <CodeAccent />
             <div>
-              Name: <span className="blue">Leonardo Laureano,</span>
+              <CodeLine><span className="keyword">const</span> <span className="var">profile</span> <span className="op">=</span> {'{'}</CodeLine>
+              <CodeLine indent><span className="key">name:</span> <CodeValue>"Leonardo Laureano"</CodeValue>,</CodeLine>
+              <CodeLine indent><span className="key">location:</span> <CodeValue>"Swindon, UK"</CodeValue>,</CodeLine>
+              <CodeLine indent><span className="key">focus:</span> <CodeValue>"SEO / GEO / Front-End"</CodeValue>,</CodeLine>
+              <CodeLine>{'}'}</CodeLine>
             </div>
-            <div>
-              Location: <span className="blue">Swindon, UK,</span>
-            </div>
-            <div>
-              Focus: <span className="blue">SEO / GEO / Front-End</span>
-            </div>
-            {'\u007D'}
           </CodeItem>
-          <CodeItem data-aos="zoom-in">
-            <span className="purple">Expertise</span> {'\u007B'}
+          <CodeItem>
+            <CodeAccent />
             <div>
-              SEO: <span className="blue">On-Page, Off-Page, Technical,</span>
+              <CodeLine><span className="keyword">const</span> <span className="var">expertise</span> <span className="op">=</span> {'{'}</CodeLine>
+              <CodeLine indent><span className="key">seo:</span> <CodeValue>"On-Page, Technical, Off-Page"</CodeValue>,</CodeLine>
+              <CodeLine indent><span className="key">tools:</span> <CodeValue>"SEMrush, GA4, GSC"</CodeValue>,</CodeLine>
+              <CodeLine indent><span className="key">dev:</span> <CodeValue>"React, Next.js, WordPress"</CodeValue>,</CodeLine>
+              <CodeLine indent><span className="key">search:</span> <CodeValue>"Google, Bing, AI Search"</CodeValue>,</CodeLine>
+              <CodeLine>{'}'}</CodeLine>
             </div>
-            <div>
-              Tools: <span className="blue">SEMrush, GA4, GSC,</span>
-            </div>
-            <div>
-              Dev: <span className="blue">React, Next.js, WordPress,</span>
-            </div>
-            <div>
-              Platforms: <span className="blue">Google, Bing, AI Search</span>
-            </div>
-            {'\u007D'}
           </CodeItem>
-        </InfosContainer>
-      </div>
+        </CodeGrid>
+      </RightCol>
     </Container>
   );
 }

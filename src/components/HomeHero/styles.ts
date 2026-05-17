@@ -3,125 +3,196 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 100%;
   display: flex;
-  gap: 4rem;
   align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 5rem 0 3rem;
 
-  > div {
-    flex: 4;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 3rem 0 2rem;
+    gap: 3rem;
   }
+`;
 
-  @media (max-width: 1450px) {
-    > div {
-      flex: 1;
-    }
+export const LeftCol = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 520px;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
   }
+`;
 
-  @media (max-width: 1000px) {
-    > img {
-      width: 22rem;
-    }
+export const Name = styled.h1`
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: ${({ theme }) => theme.text};
+  letter-spacing: -0.02em;
+
+  @media (max-width: 1200px) {
+    font-size: 4.5rem;
   }
 
   @media (max-width: 700px) {
-    flex-direction: column-reverse;
-    > div {
-      width: 100%;
-    }
+    font-size: 3.5rem;
   }
 `;
 
-export const TextContainer = styled.section`
-  margin-bottom: 2rem;
-  width: 100%;
-
-  h1 {
-    font-size: 7rem;
-    color: ${({ theme }) => theme.text};
-  }
-
-  h2 {
-    font-size: 3rem;
-    font-weight: 400;
-    color: ${({ theme }) => theme.gold};
-  }
-
-  @media (max-width: 1450px) {
-    h1 {
-      font-size: 5rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    h1 {
-      font-size: 3rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
+export const Title = styled.h2`
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.gold};
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 `;
 
-export const InfosContainer = styled.section`
-  width: 100%;
+export const Tagline = styled.p`
+  font-size: 1rem;
+  line-height: 1.7;
+  color: ${({ theme }) => theme.gray300};
+  max-width: 440px;
+`;
+
+export const CTARow = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
 `;
 
-export const CodeItem = styled.pre`
-  background: ${({ theme }) => theme.gradient};
-  padding: 2rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 300;
-  color: #fff;
-  width: 24rem;
-  align-self: flex-start;
+export const CTAButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: ${({ theme }) => theme.gold};
+  color: #121214;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: filter 0.2s, transform 0.2s;
 
-  transition: 1s !important;
-
-  @media (max-width: 1450px) {
-    width: 18rem;
-    padding: 1.5rem;
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 1300px) {
-    width: 25rem;
-    padding: 1.5rem;
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 1000px) {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 0.8rem;
+  svg {
+    transition: transform 0.2s;
   }
 
   &:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+`;
+
+export const CTALink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: ${({ theme }) => theme.gray300};
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid ${({ theme }) => theme.border};
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+
+  svg {
+    font-size: 1rem;
   }
 
-  &:last-child {
-    align-self: flex-end;
+  &:hover {
+    color: ${({ theme }) => theme.text};
+    border-color: ${({ theme }) => theme.gray300};
+    transform: translateY(-1px);
   }
+`;
+
+export const RightCol = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    justify-content: flex-start;
+  }
+`;
+
+export const CodeGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 440px;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+`;
+
+export const CodeItem = styled.div`
+  background: ${({ theme }) => theme.gradient};
+  border: 1px solid ${({ theme }) => theme.border};
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.82rem;
+  font-weight: 400;
+  transition: border-color 0.25s, transform 0.25s;
 
   > div {
-    margin: 0.2rem 0;
-    margin-left: 1rem;
+    padding: 1.25rem 1.5rem 1.25rem;
   }
 
-  span.purple {
-    color: #c38cdd;
+  &:hover {
+    border-color: ${({ theme }) => theme.gold};
+    transform: translateY(-2px);
+  }
+`;
+
+export const CodeAccent = styled.div`
+  height: 3px;
+  background: ${({ theme }) => theme.gold};
+  width: 100%;
+`;
+
+interface CodeLineProps {
+  indent?: boolean;
+}
+
+export const CodeLine = styled.div<CodeLineProps>`
+  line-height: 1.8;
+  padding-left: ${({ indent }) => indent ? '1.5rem' : '0'};
+  color: #a8a8b3;
+
+  span.keyword {
+    color: #569cd6;
   }
 
-  span.blue {
-    color: #7ac7e3;
+  span.var {
+    color: #9cdcfe;
   }
+
+  span.op {
+    color: #a8a8b3;
+  }
+
+  span.key {
+    color: #9cdcfe;
+  }
+`;
+
+export const CodeValue = styled.span`
+  color: #ce9178;
 `;
