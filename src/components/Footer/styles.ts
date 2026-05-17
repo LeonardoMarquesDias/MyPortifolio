@@ -5,9 +5,10 @@ export const Container = styled.footer`
   display: flex;
   margin-top: 10rem;
   border-top: 1px solid ${({ theme }) => theme.border};
-  height: 5rem;
+  min-height: 5rem;
   align-items: center;
   justify-content: center;
+  padding: 1.25rem 0;
 
   .container-content {
     display: flex;
@@ -17,18 +18,24 @@ export const Container = styled.footer`
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 
-    button {
+    .email-link {
       display: flex;
       align-items: center;
-      background: none;
-      border: none;
+      gap: 0.5rem;
       color: ${({ theme }) => theme.gray300};
-      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 0.9rem;
       font-weight: 300;
-      font-size: 1.2rem;
-      transition: 0.5s;
-      
+      transition: color 0.3s;
+
+      svg {
+        width: 1.1rem;
+        height: 1.1rem;
+        flex-shrink: 0;
+      }
 
       &:hover {
         color: ${({ theme }) => theme.text};
@@ -44,23 +51,51 @@ export const Container = styled.footer`
         width: 2rem;
         height: 2rem;
         color: ${({ theme }) => theme.gray300};
-        transition: 0.5s;
+        transition: 0.3s;
         cursor: pointer;
 
         &:hover {
           color: ${({ theme }) => theme.text};
         }
       }
+
+      .scroll-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: 1px solid ${({ theme }) => theme.border};
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        transition: border-color 0.3s, color 0.3s;
+        padding: 0;
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+          color: ${({ theme }) => theme.gray300};
+        }
+
+        &:hover {
+          border-color: ${({ theme }) => theme.text};
+
+          svg {
+            color: ${({ theme }) => theme.text};
+          }
+        }
+      }
     }
 
-    @media (max-width: 450px) {
-      button {
-        font-size: 0.9rem;
+    @media (max-width: 550px) {
+      .email-link {
+        font-size: 0.75rem;
       }
 
       > section {
         gap: 0.5rem;
-        
+
         svg {
           width: 1.5rem;
           height: 1.5rem;

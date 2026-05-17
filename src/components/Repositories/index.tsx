@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import SectionTitle from '../SectionTitle';
 import RepositoryItem from './RepositoryItem';
 
@@ -20,7 +19,7 @@ interface RepositoriesProps {
 function Repositories({ projects }: RepositoriesProps) {
   return (
     <Container>
-      <SectionTitle title="Bootcamp Projects" />
+      <SectionTitle title="Bootcamp Projects" description="Training Projects" />
       <section>
         {projects.slice(0, 4).map(project => (
           <RepositoryItem
@@ -33,9 +32,6 @@ function Repositories({ projects }: RepositoriesProps) {
           />
         ))}
       </section>
-      <button>
-        <Link to="/globalProjects">Global Projects</Link>
-      </button>
     </Container>
   );
 }

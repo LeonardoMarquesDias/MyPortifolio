@@ -1,8 +1,8 @@
 import {
-  AiOutlineTwitter,
   AiOutlineGithub,
   AiFillLinkedin,
 } from 'react-icons/ai';
+import { FiArrowUp, FiMail } from 'react-icons/fi';
 import { Container } from './styles';
 
 function Footer() {
@@ -20,19 +20,20 @@ function Footer() {
   return (
     <Container>
       <div className="container-content">
-        <button type="button" onClick={handleScrollTop}>
-          Top page.
-        </button>
+        <a className="email-link" href="mailto:leonardolaureanomarquesdias@gmail.com">
+          <FiMail />
+          leonardolaureanomarquesdias@gmail.com
+        </a>
         <section>
-          <AiOutlineTwitter
-            onClick={() => handleRedirect('https://twitter.com/leonard57356040')}
-          />
           <AiOutlineGithub
             onClick={() => handleRedirect('https://github.com/LeonardoMarquesDias')}
           />
           <AiFillLinkedin
             onClick={() => handleRedirect('https://www.linkedin.com/in/leolmdias/')}
           />
+          <button type="button" onClick={handleScrollTop} className="scroll-top">
+            <FiArrowUp />
+          </button>
         </section>
       </div>
     </Container>
