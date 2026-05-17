@@ -56,21 +56,10 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     text-transform: uppercase;
     color: ${props =>
       props.isActive ? props.theme.gold : props.theme.gray700};
-    transition: 0.5s; 
-    
+    transition: 0.5s;
+
     :hover {
       color: ${props => props.theme.text};
-    }
-
-    &.isActive::after {
-      content: '';
-      height: 3px;
-      border-radius: 3px 3px 0 0;
-      width: 100%;
-      position: absolute;
-      bottom: 1px;
-      left: 0;
-      background: var(--yellow-500);
     }
   }
 `;

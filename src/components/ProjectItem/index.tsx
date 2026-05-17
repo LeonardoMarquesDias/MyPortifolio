@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Container } from './styles';
 
 interface ProjectItemProps {
@@ -8,19 +8,17 @@ interface ProjectItemProps {
   slug: string;
 }
 
-export default function ProjectItem({ title, type, imgUrl, slug }: ProjectItemProps ) {
+export default function ProjectItem({ title, type, imgUrl, slug }: ProjectItemProps) {
   return (
     <Container imgUrl={imgUrl}>
-      <Link href={`/globalProjects/${slug}`}>
-        <a>
-          <div className="overlay">
-            <section>
-              <h1>{title}</h1>
-              <h2>{type}</h2>
-            </section>
-          </div>
-        </a>    
+      <Link to={`/globalProjects/${slug}`}>
+        <div className="overlay">
+          <section>
+            <h1>{title}</h1>
+            <h2>{type}</h2>
+          </section>
+        </div>
       </Link>
     </Container>
-  )
-};
+  );
+}

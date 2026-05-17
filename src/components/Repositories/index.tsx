@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SectionTitle from '../SectionTitle';
 import RepositoryItem from './RepositoryItem';
 
@@ -20,10 +20,10 @@ interface RepositoriesProps {
 function Repositories({ projects }: RepositoriesProps) {
   return (
     <Container>
-      <SectionTitle title="Last Pojects" />
+      <SectionTitle title="Last Projects" />
       <section>
         {projects.slice(0, 3).map(project => (
-          <RepositoryItem 
+          <RepositoryItem
             key={project.slug}
             img={project.thumbnail}
             title={project.title}
@@ -33,12 +33,10 @@ function Repositories({ projects }: RepositoriesProps) {
         ))}
       </section>
       <button>
-        <Link href="/globalProjects">
-          <a>Global Projects</a>
-        </Link>
+        <Link to="/globalProjects">Global Projects</Link>
       </button>
     </Container>
   );
-};
+}
 
 export default Repositories;

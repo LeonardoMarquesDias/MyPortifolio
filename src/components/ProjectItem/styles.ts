@@ -18,6 +18,7 @@ export const Container = styled.div<ContainerProps>`
     border: 1px solid ${({ theme }) => theme.border};
     transition: 0.2s;
     overflow: hidden;
+    text-decoration: none;
 
     &:hover {
       border: 1px solid ${({ theme }) => theme.gold};
@@ -33,7 +34,7 @@ export const Container = styled.div<ContainerProps>`
       height: 100%;
       background: ${({ theme }) => theme.gradient};
       opacity: 0.7;
-      transition: 0.5s; 
+      transition: 0.5s;
       border-radius: 0.5rem;
     }
 
@@ -50,7 +51,7 @@ export const Container = styled.div<ContainerProps>`
         color: ${({ theme }) => theme.gray700};
         font-weight: 300;
         font-size: 1rem;
-      }  
+      }
     }
   }
 `;
