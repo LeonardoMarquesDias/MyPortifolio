@@ -20,7 +20,7 @@ function HomeHero() {
         </CTARow>
       </LeftCol>
 
-      <RightCol data-aos="zoom-in">
+      <RightCol>
         <CodeGrid>
           <CodeItem>
             <CodeAccent />
