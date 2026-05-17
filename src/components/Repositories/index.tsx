@@ -22,7 +22,7 @@ function Repositories({ projects }: RepositoriesProps) {
     <Container>
       <SectionTitle title="Bootcamp Projects" />
       <section>
-        {projects.slice(0, 3).map(project => (
+        {projects.slice(0, 4).map(project => (
           <RepositoryItem
             key={project.slug}
             slug={project.slug}

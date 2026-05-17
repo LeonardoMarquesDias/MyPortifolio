@@ -19,7 +19,7 @@ export default function FreelanceProjects({ projects }: FreelanceProjectsProps) 
     <Container>
       <SectionTitle title="Freelance" description="Web Projects" />
       <section>
-        {projects.map(project => (
+        {projects.slice(0, 4).map(project => (
           <FreelanceItem
             key={project.slug}
             title={project.title}

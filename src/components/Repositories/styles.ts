@@ -11,12 +11,16 @@ export const Container = styled.section`
   > section {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
     @media (max-width: 700px) {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+
+      > *:nth-child(n+3) {
+        display: none;
+      }
     }
   }
 
