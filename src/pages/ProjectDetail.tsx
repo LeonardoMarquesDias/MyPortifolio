@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import BannerProject from '../components/BannerProject';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 import { FaGithub } from 'react-icons/fa';
 import { ProjectContainer } from '../styles/projectStyles';
 import { Description } from '../styles/slugStyles';
@@ -65,7 +64,6 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <ProjectContainer>
-        <Header />
         <main className="container">
           <Description>
             <h1>Project not found</h1>
@@ -82,7 +80,6 @@ export default function ProjectDetail() {
 
   return (
     <ProjectContainer>
-      <Header />
       <BannerProject imgUrl={project.imgUrl} />
       <main className="container">
         <Description>

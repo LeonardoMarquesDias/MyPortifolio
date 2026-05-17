@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Aos from 'aos';
 import Home from './pages/Home';
-import GlobalProjects from './pages/GlobalProjects';
 import ProjectDetail from './pages/ProjectDetail';
 
 export default function App() {
@@ -13,8 +12,6 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/globalProjects" element={<GlobalProjects />} />
-      <Route path="/globalProjects/:slug" element={<ProjectDetail />} />
       <Route path="/project/:slug" element={<ProjectDetail />} />
     </Routes>
   );

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
 import MyStack from '../components/MyStack';
 import Footer from '../components/Footer';
@@ -116,7 +115,6 @@ const staticProjects = [
 export default function Home() {
   return (
     <HomeContainer>
-      <Header />
       <main className="container">
         <HomeHero />
         <SeoProof screenshots={seoScreenshots} />
