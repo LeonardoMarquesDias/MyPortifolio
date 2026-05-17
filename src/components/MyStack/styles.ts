@@ -2,24 +2,36 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+`;
 
-  > section {
-    margin-top: 8rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8rem;
+export const GroupLabel = styled.p`
+  color: ${({ theme }) => theme.gold};
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-left: 3px solid ${({ theme }) => theme.gold};
+  padding-left: 0.75rem;
+  margin-bottom: -1.5rem;
+`;
 
-    @media (max-width: 1000px) {
-      gap: 5rem;
-    }
+export const StackGroup = styled.section`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
 
-    @media (max-width: 700px) {
-      gap: 3rem;
-      flex-wrap: wrap;
-      margin-top: 5rem;
-    }
+  @media (max-width: 1000px) {
+    gap: 3rem;
+  }
+
+  @media (max-width: 700px) {
+    gap: 2.5rem;
   }
 `;
 

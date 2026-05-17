@@ -25,6 +25,7 @@ function Repositories({ projects }: RepositoriesProps) {
         {projects.slice(0, 3).map(project => (
           <RepositoryItem
             key={project.slug}
+            slug={project.slug}
             img={project.thumbnail}
             title={project.title}
             type={project.type}

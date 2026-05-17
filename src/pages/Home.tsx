@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
+import StatsBar from '../components/StatsBar';
 import Experiences from '../components/Experiences';
 import MyStack from '../components/MyStack';
 import FormContact from '../components/FormContact';
@@ -106,6 +107,7 @@ export default function Home() {
       <Header />
       <main className="container">
         <HomeHero />
+        <StatsBar />
         <Experiences />
         <SeoProof screenshots={seoScreenshots} />
         <FreelanceProjects projects={freelanceProjects} />

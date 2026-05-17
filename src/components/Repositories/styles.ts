@@ -79,20 +79,30 @@ export const RepositoryContainer = styled.div<RepositoryProps>`
     }
   }
 
-  > button {
-    height: 4rem;
+  > div.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     margin: 0 0 3rem 5rem;
-    background: none;
-    border: none;
 
-    a {
-      color: ${({ theme }) => theme.gray300};
-      font-size: 1.9rem;
-      font-weight: 300;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      transition: 0.5s;
+    button {
+      height: 3rem;
+      background: none;
+      border: none;
+
+      a {
+        color: ${({ theme }) => theme.gray300};
+        font-size: 1.5rem;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        transition: 0.5s;
+
+        &:hover {
+          color: ${({ theme }) => theme.text};
+        }
+      }
     }
   }
 
@@ -135,8 +145,8 @@ export const RepositoryContainer = styled.div<RepositoryProps>`
   &:nth-child(even) {
     flex-direction: row-reverse;
 
-    > button {
-      margin: 0 5rem 3rem 0rem;
+    > div.actions {
+      margin: 0 5rem 3rem 0;
     }
 
     > section > div.text {
@@ -172,11 +182,12 @@ export const RepositoryContainer = styled.div<RepositoryProps>`
       }
     }
 
-    > button {
+    > div.actions {
       position: absolute;
       bottom: 1rem;
       right: 1rem;
       margin: 0;
+      gap: 0.5rem;
     }
 
     &:nth-child(even) {
@@ -192,7 +203,7 @@ export const RepositoryContainer = styled.div<RepositoryProps>`
         }
       }
 
-      > button {
+      > div.actions {
         position: absolute;
         bottom: 1rem;
         right: 1rem;
@@ -212,12 +223,10 @@ export const RepositoryContainer = styled.div<RepositoryProps>`
   }
 
   @media (max-width: 450px) {
-    > button {
-      height: auto;
-
-      a {
-        font-size: 1.5rem;
-        gap: 0.8rem;
+    > div.actions {
+      button a {
+        font-size: 1.2rem;
+        gap: 0.6rem;
       }
     }
 
