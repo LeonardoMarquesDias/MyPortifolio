@@ -11,8 +11,8 @@ function HomeHero() {
           I help businesses grow through strategic SEO and performant web experiences — from technical audits to production-ready code.
         </Tagline>
         <CTARow>
-          <CTAButton href="#projects">
-            View Projects <FaArrowRight />
+          <CTAButton href="#portfolio">
+            View Portfolio <FaArrowRight />
           </CTAButton>
           <CTALink href="https://github.com/LeonardoMarquesDias" target="_blank" rel="noopener noreferrer">
             <FaGithub /> GitHub
