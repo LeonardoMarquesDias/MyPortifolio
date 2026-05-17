@@ -6,7 +6,7 @@ function HomeHero() {
     <Container>
       <LeftCol>
         <Name>Leonardo<br />Dias</Name>
-        <Title>Junior SEO Executive &amp; Front-End Developer</Title>
+        <Title>Junior SEO Executive</Title>
         <Tagline>
           I help businesses grow through strategic SEO and performant web experiences — from technical audits to production-ready code.
         </Tagline>
