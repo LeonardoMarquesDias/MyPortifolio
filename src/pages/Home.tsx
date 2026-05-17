@@ -13,38 +13,38 @@ import { HomeContainer } from '../styles/homeStyles';
 const seoScreenshots = [
   {
     id: 'seo-1',
-    title: 'Crescimento Orgânico',
-    description: 'Aumento de 320% no tráfego orgânico em 6 meses',
+    title: 'Organic Growth',
+    description: '320% increase in organic traffic over 6 months',
     image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'seo-2',
-    title: 'Posição no Google',
-    description: 'Página 1 para 40+ palavras-chave estratégicas',
+    title: 'Google Rankings',
+    description: 'Page 1 ranking for 40+ strategic keywords',
     image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'seo-3',
     title: 'Core Web Vitals',
-    description: 'Score 95+ em Performance, SEO e Acessibilidade no Lighthouse',
+    description: '95+ score in Performance, SEO and Accessibility on Lighthouse',
     image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'seo-4',
-    title: 'Impressões de Busca',
-    description: 'Mais de 50.000 impressões mensais no Google Search Console',
+    title: 'Search Impressions',
+    description: 'Over 50,000 monthly impressions on Google Search Console',
     image: 'https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'seo-5',
-    title: 'Taxa de Cliques',
-    description: 'CTR médio de 8.4% acima da média do setor',
+    title: 'Click-Through Rate',
+    description: 'Average CTR of 8.4%, above industry benchmark',
     image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'seo-6',
-    title: 'Backlinks & Autoridade',
-    description: 'Domain Authority elevado com estratégia de link building',
+    title: 'Backlinks & Authority',
+    description: 'Domain Authority growth through strategic link building',
     image: 'https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&w=800'
   }
 ];
@@ -52,22 +52,22 @@ const seoScreenshots = [
 const freelanceProjects = [
   {
     slug: 'freelance-1',
-    title: 'Projeto Freelance 1',
-    description: 'Landing page institucional para empresa do setor de serviços',
+    title: 'Corporate Landing Page',
+    description: 'Institutional landing page for a service-sector company',
     screenshot: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
     url: 'https://github.com'
   },
   {
     slug: 'freelance-2',
-    title: 'Projeto Freelance 2',
-    description: 'Sistema de agendamento online com painel administrativo',
+    title: 'Booking System',
+    description: 'Online scheduling platform with full admin dashboard',
     screenshot: 'https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=800',
     url: 'https://github.com'
   },
   {
     slug: 'freelance-3',
-    title: 'Projeto Freelance 3',
-    description: 'Loja virtual com catálogo de produtos e carrinho de compras',
+    title: 'E-Commerce Store',
+    description: 'Online store with product catalog and shopping cart',
     screenshot: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=800',
     url: 'https://github.com'
   }
@@ -108,8 +108,8 @@ export default function Home() {
         <HomeHero />
         <Experiences />
         <SeoProof screenshots={seoScreenshots} />
-        <Repositories projects={staticProjects} />
         <FreelanceProjects projects={freelanceProjects} />
+        <Repositories projects={staticProjects} />
         <MyStack />
         <FormContact />
       </main>

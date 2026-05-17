@@ -24,7 +24,7 @@ export default function FreelanceItem({ title, description, screenshot, url }: F
       </section>
       <button type="button">
         <a onClick={() => handleRedirect(url)}>
-          Ver projeto <FaExternalLinkAlt color="#eba417" />
+          View project <FaExternalLinkAlt color="#eba417" />
         </a>
       </button>
     </FreelanceContainer>
