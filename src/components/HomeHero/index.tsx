@@ -3,7 +3,7 @@ import { Container, LeftCol, Name, Title, Tagline, CTARow, CTAButton, CTALink, R
 
 function HomeHero() {
   return (
-    <Container data-aos="fade-up">
+    <Container>
       <LeftCol>
         <Name>Leonardo<br />Dias</Name>
         <Title>SEO Executive &amp; Front-End Developer</Title>
