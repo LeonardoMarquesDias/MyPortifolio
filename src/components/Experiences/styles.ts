@@ -5,20 +5,20 @@ export const Container = styled.section`
 
   > section {
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 7rem;
     display: flex;
     gap: 1.5rem;
-    padding-bottom: 6rem;
-    border-bottom: 1px solid ${props => props.theme.border};
-
+    padding-bottom: 8rem;
+    border-bottom: 3px solid ${props => props.theme.border};
+    
     @media (max-width: 1000px) {
       gap: 1rem;
     }
 
     @media (max-width: 700px) {
       flex-direction: column;
-      margin-top: 4rem;
-      gap: 1.5rem;
+      margin-top: 5rem;
+      gap: 2rem;
     }
   }
 `;
@@ -26,68 +26,65 @@ export const Container = styled.section`
 export const ItemContainer = styled.div`
   > div {
     background: ${({ theme }) => theme.gradient};
-    border: 1px solid ${({ theme }) => theme.border};
-    padding: 2rem 1.5rem;
-    height: auto;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     max-width: 19rem;
     cursor: pointer;
-    border-radius: 6px;
-    transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
+    
+    transition: 0.5s;
 
     h1 {
-      color: ${({ theme }) => theme.accent};
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
+      color: ${({ theme }) => theme.purple};
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
     }
 
     > p {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
     h2 {
-      color: ${({ theme }) => theme.text};
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-bottom: 0.75rem;
+      color: ${({ theme }) => theme.gold};
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
     }
 
     p {
       color: ${props => props.theme.gray300};
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 300;
-      line-height: 1.6;
     }
 
     span {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Dancing Script', cursive;
       color: ${props => props.theme.gray700};
-      font-size: 0.75rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 1.25rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-top: 1rem;
     }
   }
 
   &:hover > div {
-    border-color: ${({ theme }) => theme.accent};
-    box-shadow: 0 4px 24px rgba(56, 189, 248, 0.1);
-    transform: translateY(-4px);
+    filter: brightness(1.3);
+    transform: translateY(-20px);
   }
 
   &:nth-child(even) > div {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 
   @media (max-width: 1000px) {
     > div {
+      height: auto;
+
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
 
       h2 {
@@ -95,7 +92,11 @@ export const ItemContainer = styled.div`
       }
 
       p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+      }
+
+      span {
+        font-size: 1.3rem;
       }
     }
   }
@@ -110,18 +111,19 @@ export const ItemContainer = styled.div`
     }
 
     > div {
+      padding: 2rem;
       max-width: 100%;
 
       h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
 
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
       }
-
+      
       p {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
   }

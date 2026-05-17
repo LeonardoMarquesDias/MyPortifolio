@@ -1,3 +1,4 @@
+import { lighten } from "polished";
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
@@ -11,11 +12,11 @@ export default createGlobalStyle`
       height: 5px;
     }
     ::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.accent};
+      background: ${({ theme }) => theme.gold};
       border-radius: 10px;
     }
     ::-webkit-scrollbar-track{
-      background: ${({ theme }) => theme.border};
+      background: ${({ theme }) => lighten(0.4, theme.gold)};
     }
   }
 

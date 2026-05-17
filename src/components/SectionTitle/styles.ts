@@ -5,40 +5,37 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.4rem;
+  gap: 0.5rem;
 
   > h1 {
     color: ${({ theme }) => theme.text};
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    font-size: 4.5rem;
   }
 
   h2 {
-    color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.gold};
     font-weight: 300;
-    font-size: 2.5rem;
-    letter-spacing: -0.01em;
+    font-size: 3.5rem;
   }
+  
 
   @media (max-width: 1000px) {
     h1 {
-      font-size: 2.25rem;
+      font-size: 2.5rem;
     }
 
     h2 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 
   @media (max-width: 500px) {
     h1 {
-      font-size: 1.75rem;
+      font-size: 1.8rem;
     }
-
+    
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
   }
 `;
