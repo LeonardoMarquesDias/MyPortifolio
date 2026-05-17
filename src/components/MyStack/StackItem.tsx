@@ -8,7 +8,7 @@ interface StackItemProps {
 
 export default function StackItem({ title, icon }: StackItemProps) {
   return (
-    <StackContainer data-aos="fade-up">
+    <StackContainer>
       <p>{title}</p>
       {icon}
     </StackContainer>

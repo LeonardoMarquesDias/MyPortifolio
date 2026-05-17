@@ -13,7 +13,7 @@ function MyStack() {
       <SectionTitle title="My Stack" description="Tools & Technologies" />
 
       <GroupLabel>SEO & Analytics</GroupLabel>
-      <StackGroup>
+      <StackGroup data-aos="fade-up">
         <StackItem title="SEMrush" icon={<SiSemrush />} />
         <StackItem title="Ahrefs" icon={<MdOutlineTravelExplore />} />
         <StackItem title="Screaming Frog" icon={<MdOutlineSearch />} />
@@ -22,7 +22,7 @@ function MyStack() {
       </StackGroup>
 
       <GroupLabel>Front-End & CMS</GroupLabel>
-      <StackGroup>
+      <StackGroup data-aos="fade-up">
         <StackItem title="HTML5" icon={<AiFillHtml5 />} />
         <StackItem title="CSS3" icon={<FaCss3Alt />} />
         <StackItem title="JavaScript" icon={<IoLogoJavascript />} />
