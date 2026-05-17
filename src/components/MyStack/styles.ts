@@ -51,8 +51,8 @@ export const StackContainer = styled.div`
   }
 
   svg {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 4rem;
+    height: 4rem;
     color: ${({ theme }) => theme.gray700};
     transition: 0.5s;
   }
@@ -70,8 +70,8 @@ export const StackContainer = styled.div`
     }
     
     svg {
-      width: 5rem;
-      height: 5rem;
+      width: 3rem;
+      height: 3rem;
     }
   }
 `;
