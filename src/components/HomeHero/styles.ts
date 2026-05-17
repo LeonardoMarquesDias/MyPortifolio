@@ -44,11 +44,11 @@ export const Name = styled.h1`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: ${({ theme }) => theme.gold};
+  color: ${({ theme }) => theme.accent};
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
 `;
 
 export const Tagline = styled.p`
@@ -70,23 +70,24 @@ export const CTAButton = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: ${({ theme }) => theme.gold};
-  color: #121214;
+  background: ${({ theme }) => theme.accent};
+  color: #0e0e10;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
   letter-spacing: 0.04em;
-  transition: filter 0.2s, transform 0.2s;
+  transition: background 0.3s ease-out, transform 0.3s ease-out, box-shadow 0.3s ease-out;
 
   svg {
-    transition: transform 0.2s;
+    transition: transform 0.3s ease-out;
   }
 
   &:hover {
-    filter: brightness(1.1);
-    transform: translateY(-1px);
+    background: ${({ theme }) => theme.accentDark};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
 
     svg {
       transform: translateX(3px);
@@ -105,7 +106,7 @@ export const CTALink = styled.a`
   border: 1px solid ${({ theme }) => theme.border};
   padding: 0.75rem 1.25rem;
   border-radius: 4px;
-  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+  transition: color 0.3s ease-out, border-color 0.3s ease-out, transform 0.3s ease-out;
 
   svg {
     font-size: 1rem;
@@ -114,7 +115,7 @@ export const CTALink = styled.a`
   &:hover {
     color: ${({ theme }) => theme.text};
     border-color: ${({ theme }) => theme.gray300};
-    transform: translateY(-1px);
+    transform: translateY(-2px);
   }
 `;
 
@@ -132,22 +133,22 @@ export const RightCol = styled.div`
 export const CodeBlock = styled.div`
   width: 100%;
   max-width: 460px;
-  background: #1e1e1e;
+  background: #161618;
   border: 1px solid ${({ theme }) => theme.border};
   border-radius: 8px;
   overflow: hidden;
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   font-size: 0.85rem;
-  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
 
   .body {
     padding: 1.5rem 1.75rem;
   }
 
   &:hover {
-    border-color: ${({ theme }) => theme.gold};
+    border-color: ${({ theme }) => theme.accent};
     transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px rgba(56, 189, 248, 0.08);
   }
 
   @media (max-width: 900px) {
@@ -159,7 +160,7 @@ export const CodeAccent = styled.div`
   display: flex;
   align-items: center;
   gap: 6px;
-  background: #2d2d2d;
+  background: #1e1e22;
   padding: 0.6rem 1rem;
   border-bottom: 1px solid ${({ theme }) => theme.border};
 
@@ -177,7 +178,7 @@ export const CodeAccent = styled.div`
 export const CodeTab = styled.span`
   margin-left: 0.75rem;
   font-size: 0.75rem;
-  color: #a8a8b3;
+  color: #6b7280;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 `;
 

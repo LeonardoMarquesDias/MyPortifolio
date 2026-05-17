@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   width: 100%;
   display: flex;
-  margin-top: 10rem;
+  margin-top: 6rem;
   border-top: 1px solid ${({ theme }) => theme.border};
   height: 5rem;
   align-items: center;
@@ -25,10 +25,10 @@ export const Container = styled.footer`
       border: none;
       color: ${({ theme }) => theme.gray300};
       text-transform: uppercase;
-      font-weight: 300;
-      font-size: 1.2rem;
-      transition: 0.5s;
-      
+      font-weight: 400;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      transition: color 0.3s ease-out;
 
       &:hover {
         color: ${({ theme }) => theme.text};
@@ -41,29 +41,29 @@ export const Container = styled.footer`
       gap: 1rem;
 
       svg {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
         color: ${({ theme }) => theme.gray300};
-        transition: 0.5s;
+        transition: color 0.3s ease-out;
         cursor: pointer;
 
         &:hover {
-          color: ${({ theme }) => theme.text};
+          color: ${({ theme }) => theme.accent};
         }
       }
     }
 
     @media (max-width: 450px) {
       button {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
       }
 
       > section {
-        gap: 0.5rem;
-        
+        gap: 0.75rem;
+
         svg {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 1.25rem;
+          height: 1.25rem;
         }
       }
     }

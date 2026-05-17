@@ -4,8 +4,8 @@ interface NavLinkProps {
   isActive: boolean;
 }
 
-export const HederContent = styled.header` 
-  width: 100%; 
+export const HederContent = styled.header`
+  width: 100%;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -15,7 +15,6 @@ export const HederContent = styled.header`
   .container-content {
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-between;
     max-width: 1400px;
     width: 100%;
@@ -23,16 +22,17 @@ export const HederContent = styled.header`
     padding: 0 2rem;
 
     h3 {
-      font-size: 2rem;
-      text-align: justify;
-      letter-spacing: 0.05rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: ${props => props.theme.gray100};
     }
   }
 
-  //Home | Projects
-  ul { 
+  ul {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     color: ${props => props.theme.gray300};
   }
 
@@ -42,24 +42,29 @@ export const HederContent = styled.header`
       align-items: center;
       justify-content: center;
     }
-    
+
     .portfolio {
       display: none;
     }
-  } 
+  }
 `;
 
 export const NavLinkContainer = styled.li<NavLinkProps>`
-
   a {
-    padding: 2rem 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
     text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
     color: ${props =>
-      props.isActive ? props.theme.gold : props.theme.gray700};
-    transition: 0.5s;
+      props.isActive ? props.theme.accent : props.theme.gray300};
+    transition: color 0.3s ease-out, background 0.3s ease-out;
+    display: block;
 
     :hover {
       color: ${props => props.theme.text};
+      background: ${props => props.theme.border};
     }
   }
 `;
