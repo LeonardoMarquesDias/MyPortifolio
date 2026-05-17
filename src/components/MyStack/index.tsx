@@ -21,7 +21,7 @@ function MyStack() {
         <StackItem title="Search Console" icon={<SiGooglesearchconsole />} />
       </StackGroup>
 
-      <GroupLabel>Front-End & CMS</GroupLabel>
+      <GroupLabel>Front-End</GroupLabel>
       <StackGroup data-aos="fade-up">
         <StackItem title="HTML5" icon={<AiFillHtml5 />} />
         <StackItem title="CSS3" icon={<FaCss3Alt />} />
@@ -29,10 +29,14 @@ function MyStack() {
         <StackItem title="TypeScript" icon={<SiTypescript />} />
         <StackItem title="React" icon={<FaReact />} />
         <StackItem title="Next.js" icon={<SiNextdotjs />} />
-        <StackItem title="WordPress" icon={<FaWordpress />} />
+      </StackGroup>
+
+      <GroupLabel>CMS & Tools</GroupLabel>
+      <StackGroup data-aos="fade-up">
         <StackItem title="Sanity" icon={<SiSanity />} />
         <StackItem title="Prismic" icon={<SiPrismic />} />
         <StackItem title="Git" icon={<FaGitAlt />} />
+        <StackItem title="WordPress" icon={<FaWordpress />} />
       </StackGroup>
     </Container>
   );
