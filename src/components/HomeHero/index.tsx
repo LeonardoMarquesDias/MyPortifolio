@@ -6,7 +6,7 @@ function HomeHero() {
     <Container>
       <LeftCol>
         <Name>Leonardo<br />Dias</Name>
-        <Title>SEO Executive &amp; Front-End Developer</Title>
+        <Title>Junior SEO Executive &amp; Front-End Developer</Title>
         <Tagline>
           I help businesses grow through strategic SEO and performant web experiences — from technical audits to production-ready code.
         </Tagline>
@@ -31,7 +31,7 @@ function HomeHero() {
           <div className="body">
             <CodeLine><span className="keyword">const</span> <span className="var">profile</span> <span className="op">=</span> {'{'}</CodeLine>
             <CodeLine indent><span className="key">location:</span> <CodeValue>"United Kingdom"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">role:</span> <CodeValue>"SEO Executive"</CodeValue>,</CodeLine>
+            <CodeLine indent><span className="key">role:</span> <CodeValue>"Junior SEO Executive"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">studying:</span> <CodeValue>"GEO (Generative Engine Optimization)"</CodeValue>,</CodeLine>
             <CodeLine>{'}'};</CodeLine>
             <CodeLine>&nbsp;</CodeLine>
