@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 1rem;
 `;
 
 export const Grid = styled.div`
