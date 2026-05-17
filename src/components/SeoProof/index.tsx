@@ -18,7 +18,7 @@ export default function SeoProof({ screenshots }: SeoProofProps) {
 
   return (
     <Container>
-      <SectionTitle title="SEO" description="Proven Results" />
+      <SectionTitle title="SEO" description="Proven Results" period="2025 – Present" />
       <Grid>
         {screenshots.map(item => (
           <ScreenshotCard
