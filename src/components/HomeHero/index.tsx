@@ -39,6 +39,7 @@ function HomeHero() {
             <CodeLine indent><span className="key">seo:</span> <CodeValue>"On-Page, Technical, Off-Page"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">tools:</span> <CodeValue>"SEMrush, GA4, GSC"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">dev:</span> <CodeValue>"React, Next.js, WordPress"</CodeValue>,</CodeLine>
+            <CodeLine indent><span className="key">languages:</span> <CodeValue>"HTML, CSS, JavaScript"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">search:</span> <CodeValue>"Google, Bing, AI Search"</CodeValue>,</CodeLine>
             <CodeLine>{'}'};</CodeLine>
           </div>
