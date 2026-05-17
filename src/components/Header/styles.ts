@@ -16,37 +16,17 @@ export const HederContent = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-between;
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
-
-    h3 {
-      font-size: 2rem;
-      text-align: justify;
-      letter-spacing: 0.05rem;
-    }
   }
 
-  //Home | Projects
-  ul { 
+  ul {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     color: ${props => props.theme.gray300};
   }
-
-  @media (max-width: 700px) {
-    .container-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .portfolio {
-      display: none;
-    }
-  } 
 `;
 
 export const NavLinkContainer = styled.li<NavLinkProps>`
