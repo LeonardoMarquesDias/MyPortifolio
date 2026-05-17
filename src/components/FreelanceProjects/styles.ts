@@ -17,10 +17,6 @@ export const Container = styled.section`
     @media (max-width: 700px) {
       grid-template-columns: 1fr;
       gap: 1.5rem;
-
-      > *:nth-child(n+3) {
-        display: none;
-      }
     }
   }
 `;
