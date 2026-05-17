@@ -70,6 +70,13 @@ const freelanceProjects = [
     description: 'Online store with product catalog and shopping cart',
     screenshot: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=800',
     url: 'https://github.com'
+  },
+  {
+    slug: 'freelance-4',
+    title: 'Your Project Title',
+    description: 'Add your project description here',
+    screenshot: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'https://github.com'
   }
 ];
 
@@ -97,6 +104,14 @@ const staticProjects = [
     description: 'Full-stack e-commerce platform with Next.js and Stripe integration',
     github: 'https://github.com/LeonardoMarquesDias',
     thumbnail: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    slug: 'your-project',
+    title: 'Your Project Title',
+    type: 'Web App',
+    description: 'Add your project description here',
+    github: 'https://github.com/LeonardoMarquesDias',
+    thumbnail: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800'
   }
 ];
 
