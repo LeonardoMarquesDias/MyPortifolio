@@ -1,4 +1,8 @@
 import { useEffect } from 'react';
+import gorestaurant from '../assets/gorestaurant.png';
+import ignewspayment from '../assets/ignewspayment.png';
+import socialfeed from '../assets/SocialFeed.png';
+import rocketshoes from '../assets/rocketshoes.png';
 import HomeHero from '../components/HomeHero';
 import MyStack from '../components/MyStack';
 import Footer from '../components/Footer';
@@ -79,36 +83,36 @@ const freelanceProjects = [
 
 const staticProjects = [
   {
-    slug: 'portfolio',
-    title: 'Portfolio',
-    type: 'Website',
-    description: 'Personal portfolio built with Next.js, React and Styled Components',
-    github: 'https://github.com/LeonardoMarquesDias/MyPortifolio',
-    thumbnail: 'https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=800'
+    slug: 'gorestaurant',
+    title: 'GoRestaurant',
+    type: 'Web App',
+    description: 'Restaurant menu management app with ReactJS',
+    github: 'https://github.com/LeonardoMarquesDias/GoRestaurant-Web-ReactJS',
+    thumbnail: gorestaurant
   },
   {
-    slug: 'dashboard',
-    title: 'Dashboard',
+    slug: 'ignewspayment',
+    title: 'igNews',
     type: 'Web App',
-    description: 'A modern dashboard application with React and TypeScript',
-    github: 'https://github.com/LeonardoMarquesDias',
-    thumbnail: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800'
+    description: 'News subscription platform with Stripe integration',
+    github: 'https://github.com/LeonardoMarquesDias/igNews',
+    thumbnail: ignewspayment
   },
   {
-    slug: 'ecommerce',
-    title: 'E-Commerce',
+    slug: 'socialfeed',
+    title: 'Social Feed',
     type: 'Web App',
-    description: 'Full-stack e-commerce platform with Next.js and Stripe integration',
-    github: 'https://github.com/LeonardoMarquesDias',
-    thumbnail: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800'
+    description: 'Social feed with posts and comments built with React + TypeScript',
+    github: 'https://github.com/LeonardoMarquesDias/Ignite-Feed-Reactjs-TS',
+    thumbnail: socialfeed
   },
   {
-    slug: 'your-project',
-    title: 'Your Project Title',
+    slug: 'rocketshoes',
+    title: 'Rocketshoes',
     type: 'Web App',
-    description: 'Add your project description here',
-    github: 'https://github.com/LeonardoMarquesDias',
-    thumbnail: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800'
+    description: 'Shopping cart app with product listing and cart management',
+    github: 'https://github.com/LeonardoMarquesDias/Rocketshoes-Cart-ReactJS',
+    thumbnail: rocketshoes
   }
 ];
 
