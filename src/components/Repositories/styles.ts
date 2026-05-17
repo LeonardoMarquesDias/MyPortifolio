@@ -1,10 +1,6 @@
 import { darken } from 'polished';
 import styled from 'styled-components';
 
-interface RepositoryProps {
-  imgUrl: string;
-}
-
 export const Container = styled.section`
   width: 100%;
   display: flex;
@@ -14,12 +10,13 @@ export const Container = styled.section`
 
   > section {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    gap: 2rem;
 
-    @media (max-width: 1000px) {
-      gap: 2rem;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   }
 
@@ -29,16 +26,17 @@ export const Container = styled.section`
     border-radius: 0.5rem;
     font-weight: normal;
     border: none;
-    transition: 0.5s;
+    transition: background 0.3s ease;
 
     &:hover {
-      background: ${({ theme }) => darken(0.25, theme.gold)};
+      background: ${({ theme }) => darken(0.15, theme.gold)};
     }
 
     a {
-      text-transform: uppercase; 
+      text-transform: uppercase;
       font-size: 1.1rem;
       color: ${({ theme }) => theme.gray700};
+      font-weight: 600;
     }
 
     @media (max-width: 500px) {
@@ -51,197 +49,108 @@ export const Container = styled.section`
   }
 `;
 
-export const RepositoryContainer = styled.div<RepositoryProps>`
-  width: 100%;
-  display: flex;
-  height: 25rem;
-  align-items: flex-end;
+export const RepositoryCard = styled.div`
   position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid ${({ theme }) => theme.border};
 
-  &:hover {
-    > section {
-      > div.text {
-        right: -15rem;
-      }
-
-      > div.overlay {
-        opacity: 0.4;
-      }
-    }
-    
-    > button a {
-      color: ${({ theme }) => theme.gray300};
-      transition: color 0.5s;
-
-      &:hover {
-        color: ${({ theme }) => theme.text};
-      }
-    }
+  img.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
   }
 
-  > div.actions {
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(18, 18, 20, 0.97) 0%, rgba(18, 18, 20, 0.5) 55%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .info {
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin: 0 0 3rem 5rem;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transform: translateY(0.75rem);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 
-    button {
-      height: 3rem;
-      background: none;
-      border: none;
+    h3 {
+      color: ${({ theme }) => theme.gold};
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      line-height: 1.2;
+    }
+
+    p {
+      color: ${({ theme }) => theme.gray300};
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
 
       a {
-        color: ${({ theme }) => theme.gray300};
-        font-size: 1.5rem;
-        font-weight: 300;
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 0.6rem;
-        transition: 0.5s;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        color: ${({ theme }) => theme.gold};
+        font-weight: 500;
+        border: 1px solid ${({ theme }) => theme.gold};
+        border-radius: 0.3rem;
+        padding: 0.25rem 0.6rem;
+        text-decoration: none;
+        transition: background 0.3s ease, color 0.3s ease;
 
         &:hover {
-          color: ${({ theme }) => theme.text};
+          background: ${({ theme }) => theme.gold};
+          color: ${({ theme }) => theme.gray700};
         }
       }
     }
   }
 
-  > section {
-    width: 50rem;
-    height: 100%;
-    background: url(${props => props.imgUrl}) no-repeat center;
-    background-size: cover;
-    position: relative;
-   
-    > div.overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: ${({ theme }) => theme.gradient};
-      opacity: 0.75;
-      transition: 0.5s;
+  &:hover {
+    img.thumbnail {
+      transform: scale(1.05);
     }
 
-    > div.text {
-      position: absolute;
-      top: 3rem;
-      right: -10rem;
-      transition: 0.5s;
-      width: fit-content;
+    .overlay {
+      opacity: 1;
+    }
 
-      h1 {
-        color: ${({ theme }) => theme.gold};
-        font-size: 2.5rem;
-      }
-
-      p {
-        color: ${({ theme }) => theme.gray300};
-        font-size: 1.5rem;
-        font-weight: 300;
-      }
+    .info {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-
-    > div.actions {
-      margin: 0 5rem 3rem 0;
+  @media (hover: none) {
+    .overlay {
+      opacity: 1;
+      background: linear-gradient(to top, rgba(18, 18, 20, 0.92) 0%, rgba(18, 18, 20, 0.3) 60%, transparent 100%);
     }
 
-    > section > div.text {
-      text-align: left;
-      right: 0;
-      left: -10rem;
-
-      h1 {
-        text-shadow: none;
-      }
-    }
-    
-    &:hover {
-      > section > div.text {
-        left: -15rem;
-      }
-    }
-  }
-
-  @media (max-width: 1450px) {
-    > section {
-      width: 40rem;
-    }
-  }
-  
-  @media (max-width: 1000px) {
-    > section {
-      width: 100%;
-
-      > div.text {
-        left: 1rem;
-        top: 1rem;
-      }
-    }
-
-    > div.actions {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      margin: 0;
-      gap: 0.5rem;
-    }
-
-    &:nth-child(even) {
-      flex-direction: row;
-
-      > section {
-        width: 100%;
-
-        > div.text {
-          left: 1rem;
-          top: 1rem;
-          text-align: left;
-        }
-      }
-
-      > div.actions {
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        margin: 0;
-      }
-
-      &:hover {
-        > section > div.text {
-          left: 1rem;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 700px) {
-    height: 17rem;
-  }
-
-  @media (max-width: 450px) {
-    > div.actions {
-      button a {
-        font-size: 1.2rem;
-        gap: 0.6rem;
-      }
-    }
-
-    > section > div.text {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
+    .info {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 `;
-
-
-
-

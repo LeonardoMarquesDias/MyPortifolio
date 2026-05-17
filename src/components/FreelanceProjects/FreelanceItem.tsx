@@ -1,5 +1,5 @@
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { FreelanceContainer } from './styles';
+import { FreelanceCard } from './styles';
 
 interface FreelanceItemProps {
   title: string;
@@ -9,24 +9,17 @@ interface FreelanceItemProps {
 }
 
 export default function FreelanceItem({ title, description, screenshot, url }: FreelanceItemProps) {
-  function handleRedirect(link: string) {
-    window.open(link);
-  }
-
   return (
-    <FreelanceContainer imgUrl={screenshot} data-aos="fade-up">
-      <section>
-        <div className="overlay" />
-        <div className="text">
-          <h1># {title}</h1>
-          <p>- {description}</p>
-        </div>
-      </section>
-      <button type="button">
-        <a onClick={() => handleRedirect(url)}>
-          View project <FaExternalLinkAlt color="#eba417" />
-        </a>
-      </button>
-    </FreelanceContainer>
+    <FreelanceCard href={url} target="_blank" rel="noreferrer" data-aos="fade-up">
+      <img className="screenshot" src={screenshot} alt={title} />
+      <div className="overlay" />
+      <div className="info">
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <span className="link">
+          View project <FaExternalLinkAlt size={11} />
+        </span>
+      </div>
+    </FreelanceCard>
   );
 }

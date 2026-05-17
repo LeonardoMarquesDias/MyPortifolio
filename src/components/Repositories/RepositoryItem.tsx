@@ -1,6 +1,6 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { RepositoryContainer } from './styles';
+import { RepositoryCard } from './styles';
 
 interface ProjetoProps {
   slug: string;
@@ -12,26 +12,21 @@ interface ProjetoProps {
 
 export default function RepositoryItem({ slug, title, type, img, github }: ProjetoProps) {
   return (
-    <RepositoryContainer imgUrl={img} data-aos="fade-up">
-      <section>
-        <div className="overlay" />
-        <div className="text">
-          <h1># {title}</h1>
-          <p>- {type}</p>
-        </div>
-      </section>
-      <div className="actions">
-        <button type="button">
+    <RepositoryCard data-aos="fade-up">
+      <img className="thumbnail" src={img} alt={title} />
+      <div className="overlay" />
+      <div className="info">
+        <h3>{title}</h3>
+        <p>{type}</p>
+        <div className="actions">
           <Link to={`/project/${slug}`}>
-            See more <FaExternalLinkAlt color="#eba417" />
+            See more <FaExternalLinkAlt size={11} />
           </Link>
-        </button>
-        <button type="button">
           <a href={github} target="_blank" rel="noreferrer">
-            GitHub <FaGithub color="#eba417" />
+            GitHub <FaGithub size={13} />
           </a>
-        </button>
+        </div>
       </div>
-    </RepositoryContainer>
+    </RepositoryCard>
   );
 }
