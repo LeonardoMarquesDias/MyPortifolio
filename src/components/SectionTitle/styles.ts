@@ -9,33 +9,37 @@ export const Container = styled.div`
 
   > h1 {
     color: ${({ theme }) => theme.text};
-    font-size: 4.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
   h2 {
     color: ${({ theme }) => theme.gold};
     font-weight: 300;
-    font-size: 3.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.85;
   }
-  
 
   @media (max-width: 1000px) {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 0.95rem;
     }
   }
 
   @media (max-width: 500px) {
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
-    
+
     h2 {
-      font-size: 1.2rem;
+      font-size: 0.85rem;
     }
   }
 `;
