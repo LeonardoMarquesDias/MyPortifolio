@@ -6,7 +6,32 @@ import MyStack from '../components/MyStack';
 import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
 import Repositories from '../components/Repositories';
+import FreelanceProjects from '../components/FreelanceProjects';
 import { HomeContainer } from '../styles/homeStyles';
+
+const freelanceProjects = [
+  {
+    slug: 'freelance-1',
+    title: 'Projeto Freelance 1',
+    description: 'Landing page institucional para empresa do setor de serviços',
+    screenshot: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'https://github.com'
+  },
+  {
+    slug: 'freelance-2',
+    title: 'Projeto Freelance 2',
+    description: 'Sistema de agendamento online com painel administrativo',
+    screenshot: 'https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'https://github.com'
+  },
+  {
+    slug: 'freelance-3',
+    title: 'Projeto Freelance 3',
+    description: 'Loja virtual com catálogo de produtos e carrinho de compras',
+    screenshot: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'https://github.com'
+  }
+];
 
 const staticProjects = [
   {
@@ -43,6 +68,7 @@ export default function Home() {
         <HomeHero />
         <Experiences />
         <Repositories projects={staticProjects} />
+        <FreelanceProjects projects={freelanceProjects} />
         <MyStack />
         <FormContact />
       </main>
