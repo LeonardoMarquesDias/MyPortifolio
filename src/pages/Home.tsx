@@ -7,7 +7,47 @@ import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
 import Repositories from '../components/Repositories';
 import FreelanceProjects from '../components/FreelanceProjects';
+import SeoProof from '../components/SeoProof';
 import { HomeContainer } from '../styles/homeStyles';
+
+const seoScreenshots = [
+  {
+    id: 'seo-1',
+    title: 'Crescimento Orgânico',
+    description: 'Aumento de 320% no tráfego orgânico em 6 meses',
+    image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'seo-2',
+    title: 'Posição no Google',
+    description: 'Página 1 para 40+ palavras-chave estratégicas',
+    image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'seo-3',
+    title: 'Core Web Vitals',
+    description: 'Score 95+ em Performance, SEO e Acessibilidade no Lighthouse',
+    image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'seo-4',
+    title: 'Impressões de Busca',
+    description: 'Mais de 50.000 impressões mensais no Google Search Console',
+    image: 'https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'seo-5',
+    title: 'Taxa de Cliques',
+    description: 'CTR médio de 8.4% acima da média do setor',
+    image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'seo-6',
+    title: 'Backlinks & Autoridade',
+    description: 'Domain Authority elevado com estratégia de link building',
+    image: 'https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&w=800'
+  }
+];
 
 const freelanceProjects = [
   {
@@ -67,6 +107,7 @@ export default function Home() {
       <main className="container">
         <HomeHero />
         <Experiences />
+        <SeoProof screenshots={seoScreenshots} />
         <Repositories projects={staticProjects} />
         <FreelanceProjects projects={freelanceProjects} />
         <MyStack />
