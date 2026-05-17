@@ -32,7 +32,9 @@ function HomeHero() {
             <CodeLine><span className="keyword">const</span> <span className="var">profile</span> <span className="op">=</span> {'{'}</CodeLine>
             <CodeLine indent><span className="key">location:</span> <CodeValue>"United Kingdom"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">role:</span> <CodeValue>"SEO Executive"</CodeValue>,</CodeLine>
+            <CodeLine indent><span className="key">experience:</span> <CodeValue>"2+ years"</CodeValue>,</CodeLine>
             <CodeLine indent><span className="key">studying:</span> <CodeValue>"GEO (Generative Engine Optimization)"</CodeValue>,</CodeLine>
+            <CodeLine indent><span className="key">available:</span> <CodeValue>"Open to opportunities"</CodeValue>,</CodeLine>
             <CodeLine>{'}'};</CodeLine>
             <CodeLine>&nbsp;</CodeLine>
             <CodeLine><span className="keyword">const</span> <span className="var">expertise</span> <span className="op">=</span> {'{'}</CodeLine>
