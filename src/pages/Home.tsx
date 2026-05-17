@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
 import MyStack from '../components/MyStack';
-import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
 import Repositories from '../components/Repositories';
 import FreelanceProjects from '../components/FreelanceProjects';
@@ -124,7 +123,6 @@ export default function Home() {
         <FreelanceProjects projects={freelanceProjects} />
         <Repositories projects={staticProjects} />
         <MyStack />
-        <FormContact />
       </main>
       <Footer />
     </HomeContainer>
