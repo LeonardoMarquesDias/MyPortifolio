@@ -129,42 +129,56 @@ export const RightCol = styled.div`
   }
 `;
 
-export const CodeGrid = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+export const CodeBlock = styled.div`
   width: 100%;
-  max-width: 440px;
+  max-width: 460px;
+  background: #1e1e1e;
+  border: 1px solid ${({ theme }) => theme.border};
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+
+  .body {
+    padding: 1.5rem 1.75rem;
+  }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.gold};
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
 
   @media (max-width: 900px) {
     max-width: 100%;
   }
 `;
 
-export const CodeItem = styled.div`
-  background: ${({ theme }) => theme.gradient};
-  border: 1px solid ${({ theme }) => theme.border};
-  border-radius: 6px;
-  overflow: hidden;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.82rem;
-  font-weight: 400;
-  transition: border-color 0.25s, transform 0.25s;
+export const CodeAccent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #2d2d2d;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid ${({ theme }) => theme.border};
 
-  > div {
-    padding: 1.25rem 1.5rem 1.25rem;
-  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
 
-  &:hover {
-    border-color: ${({ theme }) => theme.gold};
-    transform: translateY(-2px);
+    &.red    { background: #ff5f57; }
+    &.yellow { background: #febc2e; }
+    &.green  { background: #28c840; }
   }
 `;
 
-export const CodeAccent = styled.div`
-  height: 3px;
-  background: ${({ theme }) => theme.gold};
-  width: 100%;
+export const CodeTab = styled.span`
+  margin-left: 0.75rem;
+  font-size: 0.75rem;
+  color: #a8a8b3;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 `;
 
 interface CodeLineProps {
@@ -172,25 +186,14 @@ interface CodeLineProps {
 }
 
 export const CodeLine = styled.div<CodeLineProps>`
-  line-height: 1.8;
+  line-height: 1.9;
   padding-left: ${({ indent }) => indent ? '1.5rem' : '0'};
-  color: #a8a8b3;
+  color: #d4d4d4;
 
-  span.keyword {
-    color: #569cd6;
-  }
-
-  span.var {
-    color: #9cdcfe;
-  }
-
-  span.op {
-    color: #a8a8b3;
-  }
-
-  span.key {
-    color: #9cdcfe;
-  }
+  span.keyword { color: #569cd6; }
+  span.var     { color: #9cdcfe; }
+  span.op      { color: #d4d4d4; }
+  span.key     { color: #9cdcfe; }
 `;
 
 export const CodeValue = styled.span`
