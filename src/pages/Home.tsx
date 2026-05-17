@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
-import StatsBar from '../components/StatsBar';
 import MyStack from '../components/MyStack';
 import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
@@ -121,7 +120,6 @@ export default function Home() {
       <Header />
       <main className="container">
         <HomeHero />
-        <StatsBar />
         <SeoProof screenshots={seoScreenshots} />
         <FreelanceProjects projects={freelanceProjects} />
         <Repositories projects={staticProjects} />
