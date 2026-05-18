@@ -1,7 +1,7 @@
 import { AiFillHtml5 } from 'react-icons/ai';
-import { FaCss3Alt, FaReact, FaWordpress, FaGitAlt, FaGithub, FaBitbucket } from 'react-icons/fa';
+import { FaCss3Alt, FaReact, FaWordpress, FaGitAlt, FaGithub } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import { SiNextdotjs, SiTypescript, SiGoogleanalytics, SiSemrush, SiGooglesearchconsole, SiSanity, SiPrismic, SiGitkraken } from 'react-icons/si';
+import { SiNextdotjs, SiTypescript, SiGoogleanalytics, SiSemrush, SiGooglesearchconsole, SiSanity, SiPrismic } from 'react-icons/si';
 import { MdOutlineSearch, MdOutlineTravelExplore } from 'react-icons/md';
 import SectionTitle from '../SectionTitle';
 import StackItem from './StackItem';
@@ -38,8 +38,6 @@ function MyStack() {
         <StackItem title="WordPress" icon={<FaWordpress />} />
         <StackItem title="Git" icon={<FaGitAlt />} />
         <StackItem title="GitHub" icon={<FaGithub />} />
-        <StackItem title="Bitbucket" icon={<FaBitbucket />} />
-        <StackItem title="GitKraken" icon={<SiGitkraken />} />
       </StackGroup>
     </Container>
   );
