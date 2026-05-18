@@ -61,8 +61,8 @@ const freelanceProjects = [
   },
   {
     slug: 'zerobarbershop',
-    title: 'Zero Barber Shop',
-    description: 'Tattoo & barber shop website with gallery and booking',
+    title: 'La Migra Ink Tattoo Shop',
+    description: 'Tattoo shop website with gallery, artists and booking',
     screenshot: '/zerobarbershop.png',
     url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop'
   }
