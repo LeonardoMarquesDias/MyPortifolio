@@ -9,13 +9,69 @@ export const Container = styled.section`
 
   > section {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    position: relative;
+  }
+`;
 
-    @media (max-width: 700px) {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+export const CarouselWrapper = styled.div`
+  width: 100%;
+  overflow: hidden;
+`;
+
+export const CarouselTrack = styled.div`
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+`;
+
+export const CarouselNav = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid ${({ theme }) => theme.border};
+    background: transparent;
+    color: ${({ theme }) => theme.gray300};
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background: ${({ theme }) => theme.gold};
+      border-color: ${({ theme }) => theme.gold};
+      color: ${({ theme }) => theme.gray700};
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: ${({ theme }) => theme.border};
+    transition: background 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+
+    &.active {
+      background: ${({ theme }) => theme.gold};
+      transform: scale(1.3);
     }
   }
 `;
