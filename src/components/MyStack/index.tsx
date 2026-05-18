@@ -1,7 +1,7 @@
 import { AiFillHtml5 } from 'react-icons/ai';
-import { FaCss3Alt, FaReact, FaWordpress, FaGitAlt } from 'react-icons/fa';
+import { FaCss3Alt, FaReact, FaWordpress, FaGitAlt, FaGithub, FaBitbucket } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import { SiNextdotjs, SiTypescript, SiGoogleanalytics, SiSemrush, SiGooglesearchconsole, SiSanity, SiPrismic } from 'react-icons/si';
+import { SiNextdotjs, SiTypescript, SiGoogleanalytics, SiSemrush, SiGooglesearchconsole, SiSanity, SiPrismic, SiGitkraken } from 'react-icons/si';
 import { MdOutlineSearch, MdOutlineTravelExplore } from 'react-icons/md';
 import SectionTitle from '../SectionTitle';
 import StackItem from './StackItem';
@@ -31,12 +31,15 @@ function MyStack() {
         <StackItem title="Next.js" icon={<SiNextdotjs />} />
       </StackGroup>
 
-      <GroupLabel>CMS & Tools</GroupLabel>
+      <GroupLabel>CMS & Version Control</GroupLabel>
       <StackGroup data-aos="fade-up">
         <StackItem title="Sanity" icon={<SiSanity />} />
         <StackItem title="Prismic" icon={<SiPrismic />} />
-        <StackItem title="Git" icon={<FaGitAlt />} />
         <StackItem title="WordPress" icon={<FaWordpress />} />
+        <StackItem title="Git" icon={<FaGitAlt />} />
+        <StackItem title="GitHub" icon={<FaGithub />} />
+        <StackItem title="Bitbucket" icon={<FaBitbucket />} />
+        <StackItem title="GitKraken" icon={<SiGitkraken />} />
       </StackGroup>
     </Container>
   );
