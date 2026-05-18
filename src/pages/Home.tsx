@@ -64,7 +64,7 @@ const freelanceProjects = [
     title: 'La Migra Ink Tattoo Shop',
     description: 'Tattoo shop website with gallery, artists and booking',
     screenshot: '/zerobarbershop.png',
-    url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop'
+    url: 'https://github.com/LeonardoMarquesDias/lamigratattoo'
   }
 ];
 
