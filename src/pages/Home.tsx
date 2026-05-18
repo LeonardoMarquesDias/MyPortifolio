@@ -65,6 +65,14 @@ const freelanceProjects = [
     description: 'Tattoo shop website with gallery, artists and booking',
     screenshot: '/zerobarbershop.png',
     url: 'https://github.com/LeonardoMarquesDias/lamigratattoo'
+  },
+  {
+    slug: 'zerobarbershop-uk',
+    title: 'Zero Barber Shop',
+    description: 'Barbershop website with services, team, booking and product shop',
+    screenshot: '/zerobarbershop.co.uk.png',
+    url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop',
+    siteUrl: 'https://www.zerobarbershop.co.uk'
   }
 ];
 
