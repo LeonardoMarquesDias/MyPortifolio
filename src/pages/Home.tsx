@@ -56,7 +56,8 @@ const freelanceProjects = [
     title: 'SolarNex',
     description: 'Solar energy solutions landing page',
     screenshot: '/solarnex.co.uk.png',
-    url: 'https://github.com/LeonardoMarquesDias/SolarNex'
+    url: 'https://github.com/LeonardoMarquesDias/SolarNex',
+    siteUrl: 'https://www.solarnex.co.uk'
   },
   {
     slug: 'zerobarbershop',

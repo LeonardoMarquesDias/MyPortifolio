@@ -21,7 +21,7 @@ export const Container = styled.section`
   }
 `;
 
-export const FreelanceCard = styled.a`
+export const FreelanceCard = styled.div`
   position: relative;
   display: block;
   width: 100%;
@@ -74,18 +74,44 @@ export const FreelanceCard = styled.a`
       margin-bottom: 0.75rem;
     }
 
-    span.link {
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    a.btn-github,
+    a.btn-site {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       font-size: 0.85rem;
-      color: ${({ theme }) => theme.gold};
       font-weight: 500;
-      border: 1px solid ${({ theme }) => theme.gold};
       border-radius: 0.3rem;
-      padding: 0.25rem 0.6rem;
+      padding: 0.3rem 0.7rem;
       width: fit-content;
+      text-decoration: none;
       transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a.btn-github {
+      color: ${({ theme }) => theme.gray100};
+      border: 1px solid ${({ theme }) => theme.gray100};
+
+      &:hover {
+        background: ${({ theme }) => theme.gray100};
+        color: ${({ theme }) => theme.gray700};
+      }
+    }
+
+    a.btn-site {
+      color: ${({ theme }) => theme.gold};
+      border: 1px solid ${({ theme }) => theme.gold};
+
+      &:hover {
+        background: ${({ theme }) => theme.gold};
+        color: ${({ theme }) => theme.gray700};
+      }
     }
   }
 
@@ -101,11 +127,6 @@ export const FreelanceCard = styled.a`
     .info {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    .info span.link {
-      background: ${({ theme }) => theme.gold};
-      color: ${({ theme }) => theme.gray700};
     }
   }
 

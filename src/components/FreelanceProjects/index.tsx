@@ -8,6 +8,7 @@ interface IFreelanceProject {
   description: string;
   screenshot: string;
   url: string;
+  siteUrl?: string;
 }
 
 interface FreelanceProjectsProps {
@@ -26,6 +27,7 @@ export default function FreelanceProjects({ projects }: FreelanceProjectsProps) 
             description={project.description}
             screenshot={project.screenshot}
             url={project.url}
+            siteUrl={project.siteUrl}
           />
         ))}
       </section>
