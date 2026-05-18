@@ -71,8 +71,7 @@ const freelanceProjects = [
     title: 'Zero Barber Shop',
     description: 'Barbershop website with services, team, booking and product shop',
     screenshot: '/zerobarbershop.co.uk.png',
-    url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop',
-    siteUrl: 'https://www.zerobarbershop.co.uk'
+    url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop'
   }
 ];
 
