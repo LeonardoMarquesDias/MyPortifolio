@@ -52,32 +52,18 @@ const seoScreenshots = [
 
 const freelanceProjects = [
   {
-    slug: 'freelance-1',
-    title: 'Corporate Landing Page',
-    description: 'Institutional landing page for a service-sector company',
-    screenshot: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://github.com'
+    slug: 'solarnex',
+    title: 'SolarNex',
+    description: 'Solar energy solutions landing page',
+    screenshot: '/solarnex.co.uk.png',
+    url: 'https://github.com/LeonardoMarquesDias/SolarNex'
   },
   {
-    slug: 'freelance-2',
-    title: 'Booking System',
-    description: 'Online scheduling platform with full admin dashboard',
-    screenshot: 'https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://github.com'
-  },
-  {
-    slug: 'freelance-3',
-    title: 'E-Commerce Store',
-    description: 'Online store with product catalog and shopping cart',
-    screenshot: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://github.com'
-  },
-  {
-    slug: 'freelance-4',
-    title: 'Your Project Title',
-    description: 'Add your project description here',
-    screenshot: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://github.com'
+    slug: 'zerobarbershop',
+    title: 'Zero Barber Shop',
+    description: 'Tattoo & barber shop website with gallery and booking',
+    screenshot: '/zerobarbershop.png',
+    url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop'
   }
 ];
 
