@@ -8,6 +8,7 @@ const scroll = keyframes`
 export const Wrapper = styled.div`
   width: 100%;
   overflow: hidden;
+  margin-top: 6rem;
   border-top: 1px solid ${({ theme }) => theme.border};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   padding: 1.5rem 0;
