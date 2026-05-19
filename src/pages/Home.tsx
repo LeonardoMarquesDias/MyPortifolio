@@ -56,21 +56,24 @@ const freelanceProjects = [
     title: 'SolarNex',
     description: 'Solar energy solutions landing page',
     screenshot: '/solarnex.co.uk.png',
+    modalImage: '/solarnex.co.uk.png',
     url: 'https://github.com/LeonardoMarquesDias/SolarNex',
     siteUrl: 'https://www.solarnex.co.uk'
   },
   {
-    slug: 'zerobarbershop',
+    slug: 'lamigratattoo',
     title: 'La Migra Ink Tattoo Shop',
     description: 'Tattoo shop website with gallery, artists and booking',
     screenshot: '/lamigratattoo.png',
+    modalImage: '/lamigratattoo.png',
     url: 'https://github.com/LeonardoMarquesDias/lamigratattoo'
   },
   {
-    slug: 'zerobarbershop-uk',
+    slug: 'zerobarbershop',
     title: 'Zero Barber Shop',
     description: 'Barbershop website with services, team, booking and product shop',
-    screenshot: '/zerobarbershop.co.uk.png',
+    screenshot: '/zerobarbershop.png',
+    modalImage: '/zerobarbershop.co.uk.png',
     url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop'
   }
 ];

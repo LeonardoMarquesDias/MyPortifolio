@@ -6,11 +6,12 @@ interface FreelanceItemProps {
   title: string;
   description: string;
   screenshot: string;
+  modalImage?: string;
   url: string;
   siteUrl?: string;
 }
 
-export default function FreelanceItem({ title, description, screenshot, url, siteUrl }: FreelanceItemProps) {
+export default function FreelanceItem({ title, description, screenshot, modalImage, url, siteUrl }: FreelanceItemProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -66,7 +67,7 @@ export default function FreelanceItem({ title, description, screenshot, url, sit
               </div>
             </div>
             <div className="modal-img-wrap">
-              <img src={screenshot} alt={title} />
+              <img src={modalImage ?? screenshot} alt={title} />
             </div>
           </Modal>
         </ModalBackdrop>

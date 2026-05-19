@@ -9,6 +9,7 @@ interface IFreelanceProject {
   title: string;
   description: string;
   screenshot: string;
+  modalImage?: string;
   url: string;
   siteUrl?: string;
 }
@@ -50,6 +51,7 @@ export default function FreelanceProjects({ projects }: FreelanceProjectsProps) 
                   title={project.title}
                   description={project.description}
                   screenshot={project.screenshot}
+                  modalImage={project.modalImage}
                   url={project.url}
                   siteUrl={project.siteUrl}
                 />
