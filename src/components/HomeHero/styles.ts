@@ -1,4 +1,19 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const pulse = keyframes`
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.85); }
+`;
+
+const blink = keyframes`
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+`;
+
+const fadeSlideDown = keyframes`
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+`;
 
 export const Container = styled.section`
   width: 100%;
@@ -24,6 +39,28 @@ export const LeftCol = styled.div`
 
   @media (max-width: 900px) {
     max-width: 100%;
+  }
+`;
+
+export const AvailableBadge = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(40, 200, 64, 0.08);
+  border: 1px solid rgba(40, 200, 64, 0.25);
+  color: #28c840;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  width: fit-content;
+  animation: ${fadeSlideDown} 0.5s ease both;
+
+  .pulse-dot {
+    animation: ${pulse} 1.8s ease-in-out infinite;
+    color: #28c840;
   }
 `;
 
@@ -61,7 +98,7 @@ export const Tagline = styled.p`
 export const CTARow = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 0.5rem;
   flex-wrap: wrap;
 `;
@@ -131,18 +168,14 @@ export const RightCol = styled.div`
 
 export const CodeBlock = styled.div`
   width: 100%;
-  max-width: 460px;
+  max-width: 500px;
   background: #1e1e1e;
   border: 1px solid ${({ theme }) => theme.border};
   border-radius: 8px;
   overflow: hidden;
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-
-  .body {
-    padding: 1.5rem 1.75rem;
-  }
 
   &:hover {
     border-color: ${({ theme }) => theme.gold};
@@ -181,21 +214,56 @@ export const CodeTab = styled.span`
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 `;
 
-interface CodeLineProps {
-  indent?: boolean;
-}
+export const CodeBody = styled.div`
+  display: flex;
+  padding: 1.25rem 0;
 
-export const CodeLine = styled.div<CodeLineProps>`
+  .lines {
+    flex: 1;
+    padding-right: 1.5rem;
+    overflow-x: auto;
+  }
+`;
+
+export const LineNumbers = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.75rem 0 1rem;
+  border-right: 1px solid #333;
+  margin-right: 1rem;
+  user-select: none;
+`;
+
+export const LineNumber = styled.span`
+  font-size: 0.75rem;
   line-height: 1.9;
-  padding-left: ${({ indent }) => indent ? '1.5rem' : '0'};
-  color: #d4d4d4;
+  color: #555;
+  text-align: right;
+  min-width: 1.5rem;
+`;
 
-  span.keyword { color: #569cd6; }
-  span.var     { color: #9cdcfe; }
-  span.op      { color: #d4d4d4; }
-  span.key     { color: #9cdcfe; }
+export const CodeLine = styled.div`
+  line-height: 1.9;
+  color: #d4d4d4;
+  white-space: nowrap;
+
+  span.keyword   { color: #569cd6; }
+  span.var       { color: #9cdcfe; }
+  span.op        { color: #d4d4d4; }
+  span.key       { color: #9cdcfe; }
+  span.available { color: #28c840; }
 `;
 
 export const CodeValue = styled.span`
   color: #ce9178;
+`;
+
+export const CodeCursor = styled.span`
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  background: ${({ theme }) => theme.gold};
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: ${blink} 1.1s step-start infinite;
 `;

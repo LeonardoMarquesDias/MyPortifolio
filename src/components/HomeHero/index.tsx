@@ -1,19 +1,49 @@
-import { FaGithub, FaArrowRight } from 'react-icons/fa';
-import { Container, LeftCol, Name, Title, Tagline, CTARow, CTAButton, CTALink, RightCol, CodeBlock, CodeAccent, CodeLine, CodeValue, CodeTab } from './styles';
+import { FaGithub, FaArrowRight, FaLinkedin, FaCircle } from 'react-icons/fa';
+import {
+  Container, LeftCol, Name, Title, Tagline, CTARow, CTAButton, CTALink,
+  RightCol, CodeBlock, CodeAccent, CodeLine, CodeValue, CodeTab,
+  AvailableBadge, LineNumber, CodeCursor, LineNumbers, CodeBody
+} from './styles';
 
 function HomeHero() {
+  const lines = [
+    { num: 1,  content: <><span className="keyword">const</span> <span className="var"> profile</span> <span className="op"> =</span> {'{'}</> },
+    { num: 2,  content: <><span className="key">  location:</span> <CodeValue> "United Kingdom"</CodeValue>,</> },
+    { num: 3,  content: <><span className="key">  role:</span> <CodeValue> "Junior SEO Executive"</CodeValue>,</> },
+    { num: 4,  content: <><span className="key">  studying:</span> <CodeValue> "GEO (Generative Engine Optimization)"</CodeValue>,</> },
+    { num: 5,  content: <><span className="key">  available:</span> <span className="available"> "open to opportunities"</span>,</> },
+    { num: 6,  content: <>{'}'};</> },
+    { num: 7,  content: <>&nbsp;</> },
+    { num: 8,  content: <><span className="keyword">const</span> <span className="var"> expertise</span> <span className="op"> =</span> {'{'}</> },
+    { num: 9,  content: <><span className="key">  seo:</span> <CodeValue> "On-Page, Technical, Off-Page"</CodeValue>,</> },
+    { num: 10, content: <><span className="key">  seoTools:</span> <CodeValue> "SEMrush, Ahrefs, Screaming Frog, GA4, GSC"</CodeValue>,</> },
+    { num: 11, content: <><span className="key">  search:</span> <CodeValue> "Google, Bing, AI Search"</CodeValue>,</> },
+    { num: 12, content: <><span className="key">  languages:</span> <CodeValue> "HTML, CSS, JavaScript"</CodeValue>,</> },
+    { num: 13, content: <><span className="key">  frameworks:</span> <CodeValue> "React, Next.js"</CodeValue>,</> },
+    { num: 14, content: <><span className="key">  cms:</span> <CodeValue> "WordPress, Sanity, Prismic"</CodeValue>,</> },
+    { num: 15, content: <>{'}'};</> },
+  ];
+
   return (
     <Container>
       <LeftCol>
+        <AvailableBadge>
+          <FaCircle size={8} className="pulse-dot" />
+          Available for work
+        </AvailableBadge>
+
         <Name>Leonardo<br />Dias</Name>
         <Title>Junior SEO Executive</Title>
         <Tagline>
-          I help businesses grow through strategic SEO and performant web experiences — from technical audits to production-ready code.
+          SEO strategist and React developer — I combine technical audits, structured data, and production-ready code to help businesses rank higher and convert better.
         </Tagline>
         <CTARow>
           <CTAButton href="#portfolio">
             View Portfolio <FaArrowRight />
           </CTAButton>
+          <CTALink href="https://www.linkedin.com/in/leonardodiasseo/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin /> LinkedIn
+          </CTALink>
           <CTALink href="https://github.com/LeonardoMarquesDias" target="_blank" rel="noopener noreferrer">
             <FaGithub /> GitHub
           </CTALink>
@@ -28,22 +58,19 @@ function HomeHero() {
             <span className="dot green" />
             <CodeTab>portfolio.js</CodeTab>
           </CodeAccent>
-          <div className="body">
-            <CodeLine><span className="keyword">const</span> <span className="var">profile</span> <span className="op">=</span> {'{'}</CodeLine>
-            <CodeLine indent><span className="key">location:</span> <CodeValue>"United Kingdom"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">role:</span> <CodeValue>"Junior SEO Executive"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">studying:</span> <CodeValue>"GEO (Generative Engine Optimization)"</CodeValue>,</CodeLine>
-            <CodeLine>{'}'};</CodeLine>
-            <CodeLine>&nbsp;</CodeLine>
-            <CodeLine><span className="keyword">const</span> <span className="var">expertise</span> <span className="op">=</span> {'{'}</CodeLine>
-            <CodeLine indent><span className="key">seo:</span> <CodeValue>"On-Page, Technical, Off-Page"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">seoTools:</span> <CodeValue>"SEMrush, Ahrefs, Screaming Frog, GA4, GSC"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">search:</span> <CodeValue>"Google, Bing, AI Search"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">languages:</span> <CodeValue>"HTML, CSS, JavaScript"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">frameworks:</span> <CodeValue>"React, Next.js"</CodeValue>,</CodeLine>
-            <CodeLine indent><span className="key">cms:</span> <CodeValue>"WordPress, Sanity, Prismic"</CodeValue>,</CodeLine>
-            <CodeLine>{'}'};</CodeLine>
-          </div>
+          <CodeBody>
+            <LineNumbers>
+              {lines.map(l => <LineNumber key={l.num}>{l.num}</LineNumber>)}
+            </LineNumbers>
+            <div className="lines">
+              {lines.map((l, i) => (
+                <CodeLine key={l.num}>
+                  {l.content}
+                  {i === lines.length - 1 && <CodeCursor />}
+                </CodeLine>
+              ))}
+            </div>
+          </CodeBody>
         </CodeBlock>
       </RightCol>
     </Container>
