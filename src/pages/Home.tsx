@@ -65,7 +65,7 @@ const freelanceProjects = [
     title: 'La Migra Ink Tattoo Shop',
     description: 'Tattoo shop website with gallery, artists and booking',
     screenshot: '/lamigratattoo.png',
-    modalImage: '/lamigratattoo.png',
+    modalImage: '/lamigratattoo_modal.jpg',
     url: 'https://github.com/LeonardoMarquesDias/lamigratattoo'
   },
   {
@@ -73,7 +73,7 @@ const freelanceProjects = [
     title: 'Zero Barber Shop',
     description: 'Barbershop website with services, team, booking and product shop',
     screenshot: '/zerobarbershop.png',
-    modalImage: '/zerobarbershop.co.uk.png',
+    modalImage: '/zerobarbershop_modal.jpg',
     url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop'
   }
 ];
