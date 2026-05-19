@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import Repositories from '../components/Repositories';
 import FreelanceProjects from '../components/FreelanceProjects';
 import SeoProof from '../components/SeoProof';
+import StackCarousel from '../components/StackCarousel';
 import { HomeContainer } from '../styles/homeStyles';
 
 const seoScreenshots = [
@@ -121,6 +122,7 @@ export default function Home() {
         <FreelanceProjects projects={freelanceProjects} />
         <Repositories projects={staticProjects} />
       </main>
+      <StackCarousel />
       <Footer />
     </HomeContainer>
   );
