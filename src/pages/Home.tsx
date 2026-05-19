@@ -72,7 +72,7 @@ const freelanceProjects = [
     slug: 'zerobarbershop',
     title: 'Zero Barber Shop',
     description: 'Barbershop website with services, team, booking and product shop',
-    screenshot: '/zerobarbershop.png',
+    screenshot: '/zerobarbershop.co.uk.png',
     modalImage: '/zerobarbershop_modal.jpg',
     url: 'https://github.com/LeonardoMarquesDias/ZeroBarberShop'
   }
