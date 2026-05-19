@@ -21,7 +21,8 @@ function HomeHero() {
     { num: 12, content: <><span className="key">  languages:</span> <CodeValue> "HTML, CSS, JavaScript"</CodeValue>,</> },
     { num: 13, content: <><span className="key">  frameworks:</span> <CodeValue> "React, Next.js"</CodeValue>,</> },
     { num: 14, content: <><span className="key">  cms:</span> <CodeValue> "WordPress, Sanity, Prismic"</CodeValue>,</> },
-    { num: 15, content: <>{'}'};</> },
+    { num: 15, content: <><span className="key">  versionControl:</span> <CodeValue> "Git, GitHub, GitFlow"</CodeValue>,</> },
+    { num: 16, content: <>{'}'};</> },
   ];
 
   return (
