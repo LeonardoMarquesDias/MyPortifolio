@@ -4,7 +4,6 @@ import ignewspayment from '../assets/ignewspayment.png';
 import socialfeed from '../assets/SocialFeed.png';
 import rocketshoes from '../assets/rocketshoes.png';
 import HomeHero from '../components/HomeHero';
-import MyStack from '../components/MyStack';
 import Footer from '../components/Footer';
 import Repositories from '../components/Repositories';
 import FreelanceProjects from '../components/FreelanceProjects';
@@ -121,7 +120,6 @@ export default function Home() {
         <SeoProof screenshots={seoScreenshots} />
         <FreelanceProjects projects={freelanceProjects} />
         <Repositories projects={staticProjects} />
-        <MyStack />
       </main>
       <Footer />
     </HomeContainer>
