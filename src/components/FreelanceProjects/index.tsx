@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 import SectionTitle from '../SectionTitle';
 import FreelanceItem from './FreelanceItem';
-import { Container, CarouselWrapper, CarouselTrack, CarouselNav } from './styles';
+import { Container, CarouselWrapper, CarouselTrack, CarouselNav, Modal, ModalBackdrop } from './styles';
 
 interface IFreelanceProject {
   slug: string;
@@ -21,6 +21,7 @@ interface FreelanceProjectsProps {
 export default function FreelanceProjects({ projects }: FreelanceProjectsProps) {
   const [index, setIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
+  const [openSlug, setOpenSlug] = useState<string | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,6 +40,8 @@ export default function FreelanceProjects({ projects }: FreelanceProjectsProps) 
   const canNext = index < projects.length - 1;
   const translateX = index * (cardWidth + gap);
 
+  const activeProject = projects.find(p => p.slug === openSlug) ?? null;
+
   return (
     <Container>
       <SectionTitle title="Freelance" description="Websites & Landing Pages" period="2023 – 2025" />
@@ -51,9 +54,9 @@ export default function FreelanceProjects({ projects }: FreelanceProjectsProps) 
                   title={project.title}
                   description={project.description}
                   screenshot={project.screenshot}
-                  modalImage={project.modalImage}
                   url={project.url}
                   siteUrl={project.siteUrl}
+                  onOpen={() => setOpenSlug(project.slug)}
                 />
               </div>
             ))}
@@ -82,6 +85,32 @@ export default function FreelanceProjects({ projects }: FreelanceProjectsProps) 
           </button>
         </CarouselNav>
       </section>
+
+      {activeProject && (
+        <ModalBackdrop onClick={() => setOpenSlug(null)}>
+          <Modal onClick={e => e.stopPropagation()}>
+            <button className="close" onClick={() => setOpenSlug(null)}>
+              <FaTimes size={18} />
+            </button>
+            <div className="modal-header">
+              <h3>{activeProject.title}</h3>
+              <div className="modal-actions">
+                <a href={activeProject.url} target="_blank" rel="noreferrer" className="btn-github">
+                  GitHub <FaGithub size={13} />
+                </a>
+                {activeProject.siteUrl && (
+                  <a href={activeProject.siteUrl} target="_blank" rel="noreferrer" className="btn-site">
+                    Visit site <FaExternalLinkAlt size={11} />
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className="modal-img-wrap">
+              <img src={activeProject.modalImage ?? activeProject.screenshot} alt={activeProject.title} />
+            </div>
+          </Modal>
+        </ModalBackdrop>
+      )}
     </Container>
   );
 }
