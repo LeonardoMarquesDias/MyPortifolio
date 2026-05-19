@@ -41,26 +41,25 @@ export const StackContainer = styled.div`
   gap: 0.8rem;
   align-items: center;
   justify-content: center;
-
+  cursor: default;
 
   p {
-    color: ${({ theme }) => theme.gold};
+    color: ${({ theme }) => theme.text};
     font-weight: 300;
     font-size: 1.3rem;
     text-transform: uppercase;
+    transition: color 0.25s;
   }
 
   svg {
     width: 4rem;
     height: 4rem;
-    color: ${({ theme }) => theme.gray700};
-    transition: 0.5s;
+    color: ${({ theme }) => theme.gold};
   }
 
   &:hover {
-    svg {
+    p {
       color: ${({ theme }) => theme.gold};
-      transform: scale(0.95);
     }
   }
 
@@ -68,7 +67,7 @@ export const StackContainer = styled.div`
     p {
       font-size: 1rem;
     }
-    
+
     svg {
       width: 3rem;
       height: 3rem;
