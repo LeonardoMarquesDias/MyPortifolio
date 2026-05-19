@@ -3,7 +3,6 @@ import {
   AiFillLinkedin,
 } from 'react-icons/ai';
 import { FiArrowUp, FiMail } from 'react-icons/fi';
-import StackCarousel from '../StackCarousel';
 import { Container } from './styles';
 
 function Footer() {
@@ -20,7 +19,6 @@ function Footer() {
 
   return (
     <Container>
-      <StackCarousel />
       <div className="container-content">
         <a className="email-link" href="mailto:leonardolaureanomarquesdias@gmail.com">
           <FiMail />

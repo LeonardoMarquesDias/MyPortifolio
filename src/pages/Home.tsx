@@ -5,6 +5,7 @@ import socialfeed from '../assets/SocialFeed.png';
 import rocketshoes from '../assets/rocketshoes.png';
 import HomeHero from '../components/HomeHero';
 import Footer from '../components/Footer';
+import StackCarousel from '../components/StackCarousel';
 import Repositories from '../components/Repositories';
 import FreelanceProjects from '../components/FreelanceProjects';
 import SeoProof from '../components/SeoProof';
@@ -121,6 +122,7 @@ export default function Home() {
         <FreelanceProjects projects={freelanceProjects} />
         <Repositories projects={staticProjects} />
       </main>
+      <StackCarousel />
       <Footer />
     </HomeContainer>
   );
