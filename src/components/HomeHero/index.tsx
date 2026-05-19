@@ -18,7 +18,7 @@ function HomeHero() {
     { num: 9,  content: <><span className="key">  seo:</span> <CodeValue> "On-Page, Technical, Off-Page"</CodeValue>,</> },
     { num: 10, content: <><span className="key">  seoTools:</span> <CodeValue> "SEMrush, Ahrefs, Screaming Frog, GA4, GSC"</CodeValue>,</> },
     { num: 11, content: <><span className="key">  search:</span> <CodeValue> "Google, Bing, AI Search"</CodeValue>,</> },
-    { num: 12, content: <><span className="key">  languages:</span> <CodeValue> "HTML, CSS, JavaScript"</CodeValue>,</> },
+    { num: 12, content: <><span className="key">  languages:</span> <CodeValue> "HTML, CSS, JavaScript, TypeScript"</CodeValue>,</> },
     { num: 13, content: <><span className="key">  frameworks:</span> <CodeValue> "React, Next.js"</CodeValue>,</> },
     { num: 14, content: <><span className="key">  cms:</span> <CodeValue> "WordPress, Sanity, Prismic"</CodeValue>,</> },
     { num: 15, content: <><span className="key">  versionControl:</span> <CodeValue> "Git, GitHub, GitFlow"</CodeValue>,</> },
