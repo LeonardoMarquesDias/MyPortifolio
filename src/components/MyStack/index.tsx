@@ -1,5 +1,5 @@
 import { AiFillHtml5 } from 'react-icons/ai';
-import { FaCss3Alt, FaReact, FaWordpress, FaGitAlt, FaGithub } from 'react-icons/fa';
+import { FaCss3Alt, FaReact, FaWordpress, FaGitAlt, FaGithub, FaCodeBranch } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { SiNextdotjs, SiTypescript, SiGoogleanalytics, SiSemrush, SiGooglesearchconsole, SiSanity, SiPrismic } from 'react-icons/si';
 import { MdOutlineSearch, MdOutlineTravelExplore } from 'react-icons/md';
@@ -38,6 +38,7 @@ function MyStack() {
         <StackItem title="WordPress" icon={<FaWordpress />} />
         <StackItem title="Git" icon={<FaGitAlt />} />
         <StackItem title="GitHub" icon={<FaGithub />} />
+        <StackItem title="GitFlow" icon={<FaCodeBranch />} />
       </StackGroup>
     </Container>
   );
