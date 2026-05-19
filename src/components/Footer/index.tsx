@@ -20,10 +20,6 @@ function Footer() {
   return (
     <Container>
       <div className="container-content">
-        <a className="email-link" href="mailto:leonardolaureanomarquesdias@gmail.com">
-          <FiMail />
-          leonardolaureanomarquesdias@gmail.com
-        </a>
         <section>
           <AiOutlineGithub
             onClick={() => handleRedirect('https://github.com/LeonardoMarquesDias')}
@@ -35,6 +31,10 @@ function Footer() {
             <FiArrowUp />
           </button>
         </section>
+        <a className="email-link" href="mailto:leonardolaureanomarquesdias@gmail.com">
+          <FiMail />
+          leonardolaureanomarquesdias@gmail.com
+        </a>
       </div>
     </Container>
   );
