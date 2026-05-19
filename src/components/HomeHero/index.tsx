@@ -35,7 +35,7 @@ function HomeHero() {
         <Name>Leonardo<br />Dias</Name>
         <Title>Junior SEO Executive</Title>
         <Tagline>
-          SEO strategist and React developer — I combine technical audits, structured data, and production-ready code to help businesses rank higher and convert better.
+          SEO strategist and Technical executive — I combine technical audits, structured data, and production-ready code to help businesses rank higher and convert better.
         </Tagline>
         <CTARow>
           <CTAButton href="#portfolio">
