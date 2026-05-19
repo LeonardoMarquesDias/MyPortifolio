@@ -21,15 +21,15 @@ function Footer() {
     <Container>
       <div className="container-content">
         <section>
+          <button type="button" onClick={handleScrollTop} className="scroll-top">
+            <FiArrowUp />
+          </button>
           <AiOutlineGithub
             onClick={() => handleRedirect('https://github.com/LeonardoMarquesDias')}
           />
           <AiFillLinkedin
             onClick={() => handleRedirect('https://www.linkedin.com/in/leolmdias/')}
           />
-          <button type="button" onClick={handleScrollTop} className="scroll-top">
-            <FiArrowUp />
-          </button>
         </section>
         <a className="email-link" href="mailto:leonardolaureanomarquesdias@gmail.com">
           <FiMail />
